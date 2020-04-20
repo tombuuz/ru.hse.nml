@@ -1,0 +1,29 @@
+
+<idea-plugin>
+    <id>org.example.ru.hse.nml</id>
+    <name>NML language editor</name>
+    <vendor email="dlkhagvazhav@edu.hse.ru" url="http://www.hse.ru">Higher School of Economics</vendor>
+
+    <description>
+        <![CDATA[
+      Syntax highlighter for NML language. <br>Defines a new language, <i>NML language</i> with support for syntax highlighting, annotations, code completion, and other features.
+    ]]>
+    </description>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileType name="Nml language" implementationClass="ru.hse.nml.NmlFileType"
+                  fieldName="INSTANCE" language="Nml" extensions="nml"/>
+
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
