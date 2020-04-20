@@ -1,6 +1,13 @@
 # Default ignored files
 /.idea/workspace.xml
 
+bin
+build
+.*
+!.gitignore
+!.travis.yml
+*.iml
+
 # Compiled class file
 *.class
 
