@@ -17,7 +17,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <fileType name="Nml language" implementationClass="ru.hse.nml.NmlFileType"
+        <fileType name="Nml file" implementationClass="ru.hse.nml.NmlFileType"
                   fieldName="INSTANCE" language="Nml" extensions="nml"/>
 
 
