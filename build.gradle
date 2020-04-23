@@ -30,6 +30,10 @@ compileTestJava {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+generateGrammarSource {
+    arguments += ["-package", "ru.hse.nml", "-Xexact-output-dir"]
+}
+
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version ideaVersion
