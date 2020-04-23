@@ -1,6 +1,28 @@
 lexer grammar CommonLexer;
 
 //==================================================================================================
+// Fragments
+//==================================================================================================
+
+fragment LINE  : (~('\n' | '\r'))*     ;
+fragment REST  : LINE (NEWLINE | EOF)  ;
+
+fragment BIN_DIG_LST : BIN_DIGIT+ ;
+fragment HEX_DIG_LST : HEX_DIGIT+ ;
+
+fragment NONCONTROL  : LETTER | DIGIT | SYMBOL | SPACE ;
+fragment LETTER      : LOWER  | UPPER                  ;
+fragment LOWER       : 'a'..'z'                        ;
+fragment UPPER       : 'A'..'Z'                        ;
+fragment DIGIT       : '0'..'9'                        ;
+fragment BIN_DIGIT   : '0' | '1'                       ;
+fragment HEX_DIGIT   : DIGIT | 'a'..'f' | 'A'..'F'     ;
+fragment SPACE       : ' ' | '\t'                      ;
+
+// NOTE: Symbol does not include double quote character.
+fragment SYMBOL      : '!' | '#'..'/' | ':'..'@' | '['..'`' | '{'..'~' ;
+
+//==================================================================================================
 // Comments, Spaces and Newlines
 //==================================================================================================
 
@@ -10,11 +32,21 @@ NEWLINE        : ('\r'?'\n')+     -> channel(HIDDEN);
 SINGLE_COMMENT : '//' .*? NEWLINE -> channel(HIDDEN);
 MULTI_COMMENT  : '/*' .*? '*/'    -> channel(HIDDEN);
 
-fragment
-LINE : (~('\n' | '\r'))*     ;
+//==================================================================================================
+// Identifier
+//==================================================================================================
 
-fragment
-REST : LINE (NEWLINE | EOF)  ;
+ID : LETTER (LETTER | DIGIT | '_')* ;
+
+//==================================================================================================
+// Literals
+//==================================================================================================
+
+STRING_CONST : '"' NONCONTROL* '"' ;
+
+BINARY_CONST : '0b' BIN_DIG_LST  ;
+HEX_CONST    : '0x' HEX_DIG_LST  ;
+CARD_CONST   : DIGIT+              ;
 
 //==================================================================================================
 // Different Symbols
@@ -123,41 +155,6 @@ FUNCTION      : 'function'    ;
 SHARED        : 'shared'      ;
 
 REVISION      : '@rev'        ;
-
-//==================================================================================================
-// Identifier
-//==================================================================================================
-
-ID : LETTER (LETTER | DIGIT | '_')* ;
-
-//==================================================================================================
-// Literals
-//==================================================================================================
-
-STRING_CONST : '"' NONCONTROL* '"' ;
-
-BINARY_CONST : '0b' BIN_DIG_LST  ;
-HEX_CONST    : '0x' HEX_DIG_LST  ;
-CARD_CONST   : DIGIT+              ;
-
-//==================================================================================================
-// Fragments
-//==================================================================================================
-
-fragment BIN_DIG_LST : BIN_DIGIT+ ;
-fragment HEX_DIG_LST : HEX_DIGIT+ ;
-
-fragment NONCONTROL  : LETTER | DIGIT | SYMBOL | SPACE ;
-fragment LETTER      : LOWER  | UPPER                  ;
-fragment LOWER       : 'a'..'z'                        ;
-fragment UPPER       : 'A'..'Z'                        ;
-fragment DIGIT       : '0'..'9'                        ;
-fragment BIN_DIGIT   : '0' | '1'                       ;
-fragment HEX_DIGIT   : DIGIT | 'a'..'f' | 'A'..'F'     ;
-fragment SPACE       : ' ' | '\t'                      ;
-
-// NOTE: Symbol does not include double quote character.
-fragment SYMBOL      : '!' | '#'..'/' | ':'..'@' | '['..'`' | '{'..'~' ;
 
 //==================================================================================================
 // The End
