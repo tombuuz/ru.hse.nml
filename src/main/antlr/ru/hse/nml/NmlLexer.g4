@@ -1,4 +1,4 @@
-lexer grammar NMLLexerBigger;
+lexer grammar NmlLexer;
 
 //options { superClass=; }
 
@@ -31,7 +31,7 @@ ENUM      : 'enum';
 
 // Newline, Comments, Space
 WS:                 [ \t\r\n\u000C]+ -> channel(HIDDEN);
-COMMENT:            '/*' .*? '*/'    -> channel(HIDDEN);
+BLOCK_COMMENT:            '/*' .*? '*/'    -> channel(HIDDEN);
 LINE_COMMENT:       '//' ~[\r\n]*    -> channel(HIDDEN);
 
 // Separators
@@ -70,6 +70,11 @@ NEQ           : '!=' ;
 NOT           : '!'  ;
 
 //Booelan Operators
+IF            : 'if';
+THEN            : 'then';
+ELSE            : 'else';
+ENDIF            : 'endif';
+
 AND           : '&&' ;
 OR            : '||' ;
 TILDE         : '~'  ;
@@ -108,6 +113,7 @@ EXCEPTION     : 'exception'   ;
 MARK          : 'mark'        ;
 UNPREDICTED   : 'unpredicted' ;
 UNDEFINED     : 'undefined'   ;
+
 
 ASSERT        : 'assert'      ;
 FUNCTION      : 'function'    ;

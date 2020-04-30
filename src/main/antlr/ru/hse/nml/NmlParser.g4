@@ -1,5 +1,5 @@
-parser grammar NMLParserBigger;
-options { tokenVocab = NMLLexerBigger; }
+parser grammar NmlParser;
+options { tokenVocab = NmlLexer; }
 
 declaration
     : letDef
@@ -10,6 +10,8 @@ declaration
     | modeDef
     | opDef
     ;
+
+
 
 //---------------   DEFINITION OF LET   ---------------//
 
@@ -58,18 +60,18 @@ mem M[MEM_SIZE, BYTE]
  memGeneralSize : General Purpose
  memCounterSize : For Storing Counter
 */
-memDef //
-    : memAccess? MEM ID LBRACK (memGeneralSize | memCounterSize) RBRACK;
-
+memDef
+    : memAccess? MEM ID LBRACK memSize? memType RBRACK;
 memAccess
     : SHARED
     ;
-memGeneralSize
-    : numberExpr VERT_BAR typeExpr
+memSize
+    : numberExpr COMMA
     ;
-memCounterSize
-    : numberExpr
+memType
+    : typeExpr
     ;
+
 //---------------   END DEFINITION OF MEMORY   ---------------//
 
 
@@ -93,12 +95,12 @@ reg GPR[REG_NUMBER, BYTE]
 // Question : what is the range/type of number and index?
 */
 regDef
-    : REG ID LBRACK (regGeneralSize | regCounterSize) RBRACK;
-regGeneralSize
-    : numberExpr VERT_BAR typeExpr
+    : REG ID LBRACK regSize? regType RBRACK;
+regSize
+    : numberExpr COMMA
     ;
-regCounterSize
-    : numberExpr
+regType
+    : typeExpr
     ;
 //---------------   END DEFINITION OF REGISTER  ---------------//
 
@@ -114,7 +116,11 @@ mode MEM(i: card(6)) = M[i]
 mode OPRNDR = OPRNDL | IMM
 */
 modeDef
-    : MODE ID modeType;
+    : modeAccess? MODE ID modeType;
+
+modeAccess
+    : LABEL
+    ;
 
 modeType
     : modeOr
@@ -122,7 +128,7 @@ modeType
     ;
 
 modeOr
-    : ASSING ID (VERT_BAR ID)*
+    : ASSIGN ID (VERT_BAR ID)*
     ;
 
 modeAnd //(i: int(6)) = sign_extend(BYTE, i)
@@ -134,14 +140,36 @@ modeParamList
     ;
 
 modeAssignPart
+    : modeAssignPartMini (operatorArith modeAssignPartMini)*
+    ;
+
+modeAssignPartMini
     : memoryAddress
-    // | sing_extend
+    | location
+    | ID
+    | numberExpr
     ;
 
 //Question : image/syntax/action of "MODE" and "OP" are same?
 //Need to take care: there should be at least one attribute and syntax/image/action are single.
 modeAttrList
-    : (modeRev? SYNTAX ASSIGN modeSyntax)* (modeRev? IMAGE ASSIGN modeImage)* (modeRev? ACTION ASSIGN modeAction)*
+    : assignInitPart* modeSyntaxPart* modeImagePart* modeActionPart*
+    ;
+
+assignInitPart
+    : ID ASSIGN LBRACE ID ASSIGN ID SEMI RBRACE
+    ;
+
+modeSyntaxPart
+    : (modeRev? SYNTAX ASSIGN modeSyntax)
+    ;
+
+modeImagePart
+    : (modeRev? IMAGE ASSIGN modeImage)
+    ;
+
+modeActionPart
+    : (modeRev? ACTION ASSIGN modeAction)
     ;
 
 modeRev // @rev(SOMEID)
@@ -151,6 +179,7 @@ modeRev // @rev(SOMEID)
 modeSyntax
     : ID DOT SYNTAX
     | format
+    | STRING_LITERAL
     ;
 
 modeImage
@@ -181,7 +210,32 @@ op JZ (source: OPRNDL, target: J_ADDR)
 op MUL (rd : R, rs : R, rt : int(32))
 */
 opDef
-    : OP ID LPAREN opParameterList RPAREN opAttrList
+    : opAccess? OP (opNonException | opException) //OP ID opType
+    ;
+
+opNonException
+    : ID opType
+    ;
+opAccess
+    : INTERNAL
+    | PSEUDO
+    ;
+
+opType
+    : opAndRule
+    | opOrRule
+    ;
+
+opAndRule
+    : LPAREN opParameterList RPAREN opAttrList
+    ;
+
+opException
+    : EXCEPTION LPAREN RPAREN opAttrList
+    ;
+
+opOrRule
+    : ASSIGN ID (VERT_BAR ID)*
     ;
 
 opParameterList
@@ -199,6 +253,7 @@ opAttrList
 opSyntax
     : ID DOT SYNTAX
     | format
+    | STRING_LITERAL
     ;
 opImage
     : ID DOT IMAGE
@@ -235,42 +290,80 @@ opAction
 }
 */
 sequence
-    :
-    | statementSemi (conditionalStatement)*
-    | conditionalStatement (statementSemi)*
-    ;
-statementSemi
-    : statement SEMI
-    |
-    ;
-conditionalStatement
-    : IF boolStatement THEN statementSemi+ elifStatement elseStatement? ENDIF
-    ;
-elifStatement
-    : ELIF boolStatement THEN statementSemi+
-    ;
-elseStatement
-    : ELSE statementSemi+
-    ;
-statement
-    : ID DOT ID
-    | ID ASSIGN ID
-    ;
-boolStatement
-    : boolStatementVar operatorCompare boolStatementVar
-    ;
-boolStatementVar
-    : location
-    | ID
-    | numberExpr
-    // | sign_extend
-    | coerce
+    : statement*
     ;
 
+statement
+    : regularStatement
+    | conditionalStatement
+    ;
+
+regularStatement
+    : callStatement SEMI
+    | assignStatement SEMI
+    | exceptionStatement SEMI
+    | markStatement SEMI
+    | UNPREDICTED SEMI
+    ;
+
+callStatement
+    : ID DOT ID
+    | syntaImageActionCall
+    | format
+    ;
+
+assignStatement
+    : (ID | memoryAddress) ASSIGN (assignStatementRight | assignStatementRightParen) (operatorArith (assignStatementRight | assignStatementRightParen))*
+    | memoryAddress ASSIGN ID
+    | ID ASSIGN locationDCol
+    | ID ASSIGN memoryAddress
+    ;
+
+
+assignStatementRightParen
+    : TILDE? LPAREN assignStatementRight RPAREN
+    ;
+
+assignStatementRight
+    : assignStatementRightVar  (operatorArith assignStatementRightVar)*
+    ;
+
+assignStatementRightVar
+    : (numberExpr | coerce | sign_extend | location | zero_extend | locationNoDot | locationDCol | locationDColNoDot)
+    ;
+
+exceptionStatement
+    : EXCEPTION LPAREN formatString RPAREN
+    ;
+markStatement
+    : MARK LPAREN formatString RPAREN
+    ;
+
+
+conditionalStatement
+    : IF booleanState THEN regularStatement* elifState* (ELSE regularStatement*)* ENDIF SEMI
+    ;
+
+booleanState
+    : booleanVal (operatorCompare booleanVal)*
+    ;
+
+booleanVal
+    : booleanVal operatorCompare booleanVal
+    | ID
+    | coerce
+    | sign_extend
+    | numberExpr
+    | locationNoDot
+    ;
+
+elifState
+    : ELIF booleanState THEN statement*
+    ;
 //---------------   END DEFINITION OF SEQUENCE  ---------------//
 
 
-//---------------   DEFINITION OF ADDITIONAL FUNCTION: FORMAT  ---------------//
+//---------------   DEFINITION OF ADDITIONAL FUNCTION: FORMAT  AND INSTRUCTION ---------------//
 /*
 format("%s", if i == 0 && j == 0 then "%AL"
                       elif i == 0 && j == 1 then "%AH"
@@ -285,33 +378,49 @@ format("%s", disp<0..7>::disp<8..15>)
 format("001%s11010001011%s%s%s%s", seg_ovrd.image, mod, dst.image, rm, src.image)
 format("0001001%s%s%3s%s1010011", rs2.image, rs1.image, coerce(card(3), RM_RNE), rd.image)
 */
+
+
 format
-    : FORMAT LPAREN formatString formatParameters  RPAREN
+    : FORMAT LPAREN formatString (COMMA  formatParameter (COMMA formatParameter)*)? RPAREN
     ;
 
 formatString
     : STRING_LITERAL
     ;
-
-formatParameters
-    :
-    | formatParameter (COMMA formatParameter)*
-    // | if else format
-    ;
-
 formatParameter
-    : ID
-    | formatParamConditional
-    | ID DOT (IMAGE | ACTION | SYNTAX)
-    | locationDCol
+    : formatParameterMini (operatorArith formatParameterMini)*
     ;
-
-formatParamConditional
-    :
+formatParameterMini
+    : ID
+    | syntaImageActionCall
+    | location
+    | numberExpr
     ;
 
 
 //---------------   END DEFINITION OF ADDITIONAL FUNCTIONS: FORMAT  ---------------//
+
+// --- + Additional
+syntaImageActionCall
+    : ID (LPAREN sIAPar (COMMA sIAPar)* RPAREN)?  DOT (IMAGE | SYNTAX | ACTION)
+    ;
+
+sIAPar
+    : sIAParMini
+    | ID LPAREN sIAParMini (COMMA sIAParMini)* RPAREN
+    | modeCall
+    | numberExpr
+    ;
+
+sIAParMini
+    : ID
+    | ID DOT location
+    ;
+
+modeCall
+    : ID LPAREN numberExpr RPAREN
+    ;
+//
 
 //---------------   DEFINITION OF ADDITIONAL FUNCTION: LOCATION  ---------------//
 /*
@@ -324,14 +433,21 @@ temp<0>
 location
     : ID LE numberExpr (DOUBLE_DOT numberExpr)? GRE
     ;
-locationDCol
-    : location DOUBLE_COLON location
+locationNoDot
+    : ID LE numberExpr GRE
     ;
+locationDCol
+    : location DOUBLE_COLON ID
+    ;
+locationDColNoDot
+    : locationNoDot DOUBLE_COLON ID
+    ;
+
 
 //---------------   END DEFINITION OF ADDITIONAL FUNCTION: LOCATION  ---------------//
 
 
-//---------------   DEFINITION OF ADDITIONAL FUNCTION: COERCE  ---------------//
+//---------------   DEFINITION OF ADDITIONAL FUNCTION: COERCE  AND SIGN_EXTEND / ZERO_EXTEND ---------------//
 /*
 coerce(card(3)
 coerce(card(3), RM_RNE)
@@ -340,6 +456,15 @@ coerce(card(11), 0)
 coerce(WORD, offset)
 coerce(addR, cast(SWORD, BP + SI))
 */
+
+zero_extend
+    : ZERO_EXTEND LPAREN coerceType (COMMA coerceNumber)? RPAREN
+    ;
+
+sign_extend
+    : SIGN_EXTEND LPAREN coerceType (COMMA coerceNumber)? RPAREN
+    ;
+
 
 coerce
     : COERCE LPAREN coerceType (COMMA coerceNumber)? RPAREN
@@ -421,15 +546,15 @@ memoryAddressDCol
     : memoryAddress DOUBLE_COLON memoryAddress
     ;
 memoryAddress
-    : MEM LBRACK memNumberPart COMMA memTypePart RBRACK
+    : ID LBRACK (assignStatementRight | assignStatementRightParen) (operatorArith (assignStatementRight | assignStatementRightParen))* (COMMA memTypePart)* RBRACK
     ;
-memNumberPart
-    : memNumParameter (operatorArith memNumParameter)*
-    ;
-memNumParameter
-    : ID
-    | coerce
-    ;
+//memParameterPart
+//    : memNumParameter (operatorArith memNumParameter)*
+//    ;
+//memNumParameter
+//    : numberExpr
+//    | coerce
+//    ;
 memTypePart
     : typeExpr
     ;
@@ -455,16 +580,21 @@ operatorArith
     | ROTATE_LEFT
     | ROTATE_RIGHT
     | DOUBLE_STAR
+    | UP_ARROW
+    | VERT_BAR
+    | AMPER
+    | MUL
     ;
 
 operatorCompare
-    : LE | GRE | LEQ | GREQ | EQ | NEQ;
+    : LE | GRE | LEQ | GREQ | EQ | NEQ | AND;
 
 
 numberExpr
     : NUMBER_LITERAL
     | NUMBER_LITERAL (operatorArith numberExpr)*
     | LPAREN numberExpr RPAREN
+    | ID
     ;
 
 
