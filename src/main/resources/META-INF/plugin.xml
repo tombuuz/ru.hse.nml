@@ -1,8 +1,9 @@
 
 <idea-plugin>
     <id>org.example.ru.hse.nml</id>
-    <name>NML language editor</name>
+    <name>nML language editor</name>
     <vendor email="dlkhagvazhav@edu.hse.ru" url="http://www.hse.ru">Higher School of Economics</vendor>
+
 
     <description>
         <![CDATA[
@@ -14,16 +15,19 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <fileType name="Nml file" implementationClass="ru.hse.nml.NmlFileType"
-                  fieldName="INSTANCE" language="Nml" extensions="nml"/>
-
+        <fileType name="nMl file" implementationClass="ru.hse.nml.NmlFileType"
+                  fieldName="INSTANCE" language="nML" extensions="nml"/>
+        <lang.parserDefinition language="nML"
+                               implementationClass="ru.hse.nml.NmlParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="nML"
+                                       implementationClass="ru.hse.nml.NmlSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="ru.hse.nml.NmlColorSettingsPage"/>
 
     </extensions>
 
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
+
 </idea-plugin>
