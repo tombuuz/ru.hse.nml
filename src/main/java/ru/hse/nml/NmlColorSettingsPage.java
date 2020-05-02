@@ -17,7 +17,15 @@ import java.util.Map;
 public class NmlColorSettingsPage implements ColorSettingsPage {
     private static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{
             new AttributesDescriptor("String", NmlSyntaxHighlighter.STRING),
-            new AttributesDescriptor("Comment", NmlSyntaxHighlighter.COMMENT_BLOCK )
+            new AttributesDescriptor("Block Comment", NmlSyntaxHighlighter.COMMENT_BLOCK),
+            new AttributesDescriptor("Line Comment", NmlSyntaxHighlighter.COMMENT_LINE),
+            new AttributesDescriptor("Identifier", NmlSyntaxHighlighter.ID),
+            new AttributesDescriptor("Number", NmlSyntaxHighlighter.NUMBER),
+            new AttributesDescriptor("Keyword", NmlSyntaxHighlighter.KEYWORD),
+            new AttributesDescriptor("Operation Sign", NmlSyntaxHighlighter.OPERATION_SIGN),
+            new AttributesDescriptor("Comma", NmlSyntaxHighlighter.COMMA),
+            new AttributesDescriptor("Parentheses", NmlSyntaxHighlighter.PARENTHESES),
+            new AttributesDescriptor("Brackets", NmlSyntaxHighlighter.BRACKETS)
     };
 
     @Nullable
@@ -35,7 +43,7 @@ public class NmlColorSettingsPage implements ColorSettingsPage {
     @NotNull
     @Override
     public String getDemoText() {
-        return null;
+        return "demo text will be here";
     }
 
     @Nullable
