@@ -26,7 +26,8 @@
         <lang.syntaxHighlighterFactory language="nML"
                                        implementationClass="ru.hse.nml.NmlSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="ru.hse.nml.NmlColorSettingsPage"/>
-
+        <lang.commenter language="nML" implementationClass="ru.hse.nml.NmlCommenter"/>
+        <completion.contributor language="nML" implementationClass="ru.hse.nml.NmlCompletionContributor"/>
     </extensions>
 
 
