@@ -6,6 +6,10 @@ import com.intellij.psi.PsiComment;
 import com.intellij.psi.tree.IElementType;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Description: Here comments will be converted into "PSI Comment Node".
+ */
+
 public class NmlCommenter implements Commenter {
 
     @Nullable
