@@ -1,4 +1,4 @@
-package ru.hse.nml;
+package ru.hse.nml.highlighter;
 
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
@@ -7,6 +7,7 @@ import com.intellij.openapi.options.colors.ColorDescriptor;
 import com.intellij.openapi.options.colors.ColorSettingsPage;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ru.hse.nml.icon.NmlIcons;
 
 import javax.swing.*;
 import java.util.Map;

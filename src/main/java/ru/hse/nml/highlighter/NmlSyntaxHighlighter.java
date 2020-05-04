@@ -1,4 +1,4 @@
-package ru.hse.nml;
+package ru.hse.nml.highlighter;
 
 import com.intellij.lexer.Lexer;
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
@@ -9,6 +9,7 @@ import org.antlr.intellij.adaptor.lexer.ANTLRLexerAdaptor;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
 import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Text;
+import ru.hse.nml.NmlLanguage;
 import ru.hse.nml.grammar.NmlLexer;
 
 public class NmlSyntaxHighlighter extends SyntaxHighlighterBase {
@@ -123,18 +124,5 @@ public class NmlSyntaxHighlighter extends SyntaxHighlighterBase {
                 return EMPTY_KEYS;
         }
         return new TextAttributesKey[]{attrKey};
-
-        /*
-        if (tokenType == NmlTokenType.TOKEN_ELEMENT_TYPES.get(NmlLexer.BLOCK_COMMENT)){
-            return COMMENT_KEYS;
-        } else if (tokenType == NmlTokenType.TOKEN_ELEMENT_TYPES.get(NmlLexer.LINE_COMMENT)){
-            return COMMENT_KEYS;
-        } else if (tokenType == NmlTokenType.TOKEN_ELEMENT_TYPES.get(NmlLexer.STRING_LITERAL)){
-            return STRING_KEYS;
-        }
-        else{
-            return EMPTY_KEYS;
-        }
-         */
     }
 }

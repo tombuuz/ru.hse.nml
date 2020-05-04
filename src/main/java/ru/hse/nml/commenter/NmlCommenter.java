@@ -1,4 +1,4 @@
-package ru.hse.nml;
+package ru.hse.nml.commenter;
 
 import com.intellij.lang.CodeDocumentationAwareCommenter;
 import com.intellij.lang.Commenter;

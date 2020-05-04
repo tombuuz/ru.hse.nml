@@ -3,6 +3,7 @@ package ru.hse.nml;
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ru.hse.nml.icon.NmlIcons;
 
 import javax.swing.*;
 
@@ -18,19 +19,19 @@ public class NmlFileType extends LanguageFileType {
     @NotNull
     @Override
     public String getName() {
-        return "Nml file";
+        return "nML file";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Nml language file";
+        return "nML language file";
     }
 
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "nml";
+        return "nML";
     }
 
     @Nullable

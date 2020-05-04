@@ -1,4 +1,4 @@
-package ru.hse.nml;
+package ru.hse.nml.icon;
 
 import com.intellij.openapi.util.IconLoader;
 import javax.swing.*;

@@ -24,10 +24,12 @@
         <lang.parserDefinition language="nML"
                                implementationClass="ru.hse.nml.NmlParserDefinition"/>
         <lang.syntaxHighlighterFactory language="nML"
-                                       implementationClass="ru.hse.nml.NmlSyntaxHighlighterFactory"/>
-        <colorSettingsPage implementation="ru.hse.nml.NmlColorSettingsPage"/>
-        <lang.commenter language="nML" implementationClass="ru.hse.nml.NmlCommenter"/>
-        <completion.contributor language="nML" implementationClass="ru.hse.nml.NmlCompletionContributor"/>
+                                       implementationClass="ru.hse.nml.highlighter.NmlSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="ru.hse.nml.highlighter.NmlColorSettingsPage"/>
+        <lang.commenter language="nML" implementationClass="ru.hse.nml.commenter.NmlCommenter"/>
+        <completion.contributor language="nML" implementationClass="ru.hse.nml.completion.NmlCompletionContributor"/>
+        <lang.braceMatcher language="nML" implementationClass="ru.hse.nml.completion.NmlBraceMatcher"/>
+        <backspaceHandlerDelegate implementation="ru.hse.nml.completion.NmlArrowBackSpaceHandler"/>
     </extensions>
 
 

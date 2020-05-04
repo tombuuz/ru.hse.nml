@@ -1,14 +1,13 @@
-package ru.hse.nml.psi;
+package ru.hse.nml.psiNew;
 
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
-import ru.hse.nml.PsiElementFactory;
 
-public class declarationNode extends ASTWrapperPsiElement {
+public class NodeDeclaration extends ASTWrapperPsiElement {
 
-    public declarationNode(@NotNull ASTNode node) {
+    public NodeDeclaration(@NotNull ASTNode node) {
         super(node);
     }
 
@@ -17,7 +16,7 @@ public class declarationNode extends ASTWrapperPsiElement {
 
         @Override
         public PsiElement createElement(ASTNode node) {
-            return new declarationNode(node);
+            return new NodeDeclaration(node);
         }
     }
 }

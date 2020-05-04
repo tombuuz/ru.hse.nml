@@ -11,8 +11,6 @@ declaration
     | opDef
     ;
 
-
-
 //---------------   DEFINITION OF LET   ---------------//
 
 /*

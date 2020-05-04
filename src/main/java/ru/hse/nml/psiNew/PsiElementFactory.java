@@ -1,4 +1,4 @@
-package ru.hse.nml;
+package ru.hse.nml.psiNew;
 
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;

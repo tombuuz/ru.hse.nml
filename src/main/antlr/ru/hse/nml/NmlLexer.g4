@@ -30,9 +30,9 @@ INT       : 'int';
 ENUM      : 'enum';
 
 // Newline, Comments, Space
-WS:                 [ \t\r\n\u000C]+ -> channel(HIDDEN);
-BLOCK_COMMENT:            '/*' .*? '*/'    -> channel(HIDDEN);
-LINE_COMMENT:       '//' ~[\r\n]*    -> channel(HIDDEN);
+WS:                 [ \t\r\n\u000C]+ ;//-> channel(HIDDEN);
+BLOCK_COMMENT:            '/*' .*? '*/'   ;// -> channel(HIDDEN);
+LINE_COMMENT:       '//' ~[\r\n]*   ;// -> channel(HIDDEN);
 
 // Separators
 LPAREN:             '(';
