@@ -1,4 +1,4 @@
-package ru.hse.nml.completion;
+package ru.hse.nml.braceMatcher;
 
 import com.intellij.codeInsight.editorActions.BackspaceHandlerDelegate;
 import com.intellij.openapi.editor.Editor;
@@ -7,7 +7,7 @@ import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.util.PsiUtilCore;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
 import org.jetbrains.annotations.NotNull;
-import ru.hse.nml.grammar.NmlLexer;
+import ru.hse.nml.NmlLexer;
 
 public class NmlArrowBackSpaceHandler extends BackspaceHandlerDelegate {
     @Override

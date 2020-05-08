@@ -1,4 +1,4 @@
-// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/grammar/NmlLexer.g4 by ANTLR 4.8
+// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/NmlLexer.g4 by ANTLR 4.8
 package ru.hse.nml.grammar;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -21,7 +21,7 @@ public class NmlLexer extends Lexer {
 		LABEL=11, STRUCT=12, SYNTAX=13, IMAGE=14, ACTION=15, BOOL=16, CARD=17, 
 		FIX=18, FLOAT=19, INT=20, ENUM=21, WS=22, BLOCK_COMMENT=23, LINE_COMMENT=24, 
 		LPAREN=25, RPAREN=26, LBRACE=27, RBRACE=28, LBRACK=29, RBRACK=30, SEMI=31, 
-		COMMA=32, DOT=33, QOAT=34, ASSIGN=35, PLUS=36, MINUS=37, MUL=38, DIV=39,
+		COMMA=32, DOT=33, QOAT=34, ASSIGN=35, PLUS=36, MINUS=37, MUL=38, DIV=39, 
 		REM=40, DOUBLE_STAR=41, LEFT_SHIFT=42, RIGHT_SHIFT=43, ROTATE_LEFT=44, 
 		ROTATE_RIGHT=45, LE=46, GRE=47, LEQ=48, GREQ=49, EQ=50, NEQ=51, NOT=52, 
 		IF=53, THEN=54, ELSE=55, ENDIF=56, AND=57, OR=58, TILDE=59, AMPER=60, 

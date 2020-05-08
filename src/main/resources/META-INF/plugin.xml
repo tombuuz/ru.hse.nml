@@ -22,14 +22,20 @@
         <fileType name="nMl file" implementationClass="ru.hse.nml.NmlFileType"
                   fieldName="INSTANCE" language="nML" extensions="nml"/>
         <lang.parserDefinition language="nML"
-                               implementationClass="ru.hse.nml.NmlParserDefinition"/>
+                               implementationClass="ru.hse.nml.psi.NmlParserDefinition"/>
         <lang.syntaxHighlighterFactory language="nML"
                                        implementationClass="ru.hse.nml.highlighter.NmlSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="ru.hse.nml.highlighter.NmlColorSettingsPage"/>
         <lang.commenter language="nML" implementationClass="ru.hse.nml.commenter.NmlCommenter"/>
         <completion.contributor language="nML" implementationClass="ru.hse.nml.completion.NmlCompletionContributor"/>
-        <lang.braceMatcher language="nML" implementationClass="ru.hse.nml.completion.NmlBraceMatcher"/>
-        <backspaceHandlerDelegate implementation="ru.hse.nml.completion.NmlArrowBackSpaceHandler"/>
+        <lang.braceMatcher language="nML" implementationClass="ru.hse.nml.braceMatcher.NmlBraceMatcher"/>
+        <backspaceHandlerDelegate implementation="ru.hse.nml.braceMatcher.NmlArrowBackSpaceHandler"/>
+        <lang.ast.factory language="nML" implementationClass="ru.hse.nml.psi.NmlASTFactory"/>
+        <lang.psiStructureViewFactory language="nML" implementationClass="ru.hse.nml.structureView.NmlStructureViewFactory"/>
+        <lang.foldingBuilder language="nML" implementationClass="ru.hse.nml.folder.NmlFoldingBuilder"/>
+<!--
+        <psi.referenceContributor language="nML" implementation=""/>
+-->
     </extensions>
 
 

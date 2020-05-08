@@ -1,919 +1,909 @@
-// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/grammar/NmlParser.g4 by ANTLR 4.8
+// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/NmlParser.g4 by ANTLR 4.8
 package ru.hse.nml.grammar;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
  * This interface defines a complete listener for a parse tree produced by
- * {@link ru.hse.nml.grammar.NmlParser}.
+ * {@link NmlParser}.
  */
 public interface NmlParserListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#declaration}.
+	 * Enter a parse tree produced by {@link NmlParser#specification}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclaration(ru.hse.nml.grammar.NmlParser.DeclarationContext ctx);
+	void enterSpecification(NmlParser.SpecificationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#declaration}.
+	 * Exit a parse tree produced by {@link NmlParser#specification}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclaration(ru.hse.nml.grammar.NmlParser.DeclarationContext ctx);
+	void exitSpecification(NmlParser.SpecificationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#letDef}.
+	 * Enter a parse tree produced by {@link NmlParser#declaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterLetDef(ru.hse.nml.grammar.NmlParser.LetDefContext ctx);
+	void enterDeclaration(NmlParser.DeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#letDef}.
+	 * Exit a parse tree produced by {@link NmlParser#declaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitLetDef(ru.hse.nml.grammar.NmlParser.LetDefContext ctx);
+	void exitDeclaration(NmlParser.DeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#letExpr}.
+	 * Enter a parse tree produced by {@link NmlParser#letDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterLetExpr(ru.hse.nml.grammar.NmlParser.LetExprContext ctx);
+	void enterLetDef(NmlParser.LetDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#letExpr}.
+	 * Exit a parse tree produced by {@link NmlParser#letDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitLetExpr(ru.hse.nml.grammar.NmlParser.LetExprContext ctx);
+	void exitLetDef(NmlParser.LetDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeDef}.
+	 * Enter a parse tree produced by {@link NmlParser#letExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeDef(ru.hse.nml.grammar.NmlParser.TypeDefContext ctx);
+	void enterLetExpr(NmlParser.LetExprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeDef}.
+	 * Exit a parse tree produced by {@link NmlParser#letExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeDef(ru.hse.nml.grammar.NmlParser.TypeDefContext ctx);
+	void exitLetExpr(NmlParser.LetExprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExpr}.
+	 * Enter a parse tree produced by {@link NmlParser#typeDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeExpr(ru.hse.nml.grammar.NmlParser.TypeExprContext ctx);
+	void enterTypeDef(NmlParser.TypeDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExpr}.
+	 * Exit a parse tree produced by {@link NmlParser#typeDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeExpr(ru.hse.nml.grammar.NmlParser.TypeExprContext ctx);
+	void exitTypeDef(NmlParser.TypeDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExprDataType}.
+	 * Enter a parse tree produced by {@link NmlParser#typeExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeExprDataType(ru.hse.nml.grammar.NmlParser.TypeExprDataTypeContext ctx);
+	void enterTypeExpr(NmlParser.TypeExprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExprDataType}.
+	 * Exit a parse tree produced by {@link NmlParser#typeExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeExprDataType(ru.hse.nml.grammar.NmlParser.TypeExprDataTypeContext ctx);
+	void exitTypeExpr(NmlParser.TypeExprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExprValue}.
+	 * Enter a parse tree produced by {@link NmlParser#typeExprDataType}.
 	 * @param ctx the parse tree
 	 */
-	void enterTypeExprValue(ru.hse.nml.grammar.NmlParser.TypeExprValueContext ctx);
+	void enterTypeExprDataType(NmlParser.TypeExprDataTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExprValue}.
+	 * Exit a parse tree produced by {@link NmlParser#typeExprDataType}.
 	 * @param ctx the parse tree
 	 */
-	void exitTypeExprValue(ru.hse.nml.grammar.NmlParser.TypeExprValueContext ctx);
+	void exitTypeExprDataType(NmlParser.TypeExprDataTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memDef}.
+	 * Enter a parse tree produced by {@link NmlParser#typeExprValue}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemDef(ru.hse.nml.grammar.NmlParser.MemDefContext ctx);
+	void enterTypeExprValue(NmlParser.TypeExprValueContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memDef}.
+	 * Exit a parse tree produced by {@link NmlParser#typeExprValue}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemDef(ru.hse.nml.grammar.NmlParser.MemDefContext ctx);
+	void exitTypeExprValue(NmlParser.TypeExprValueContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memAccess}.
+	 * Enter a parse tree produced by {@link NmlParser#memDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemAccess(ru.hse.nml.grammar.NmlParser.MemAccessContext ctx);
+	void enterMemDef(NmlParser.MemDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memAccess}.
+	 * Exit a parse tree produced by {@link NmlParser#memDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemAccess(ru.hse.nml.grammar.NmlParser.MemAccessContext ctx);
+	void exitMemDef(NmlParser.MemDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memSize}.
+	 * Enter a parse tree produced by {@link NmlParser#memAccess}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemSize(ru.hse.nml.grammar.NmlParser.MemSizeContext ctx);
+	void enterMemAccess(NmlParser.MemAccessContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memSize}.
+	 * Exit a parse tree produced by {@link NmlParser#memAccess}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemSize(ru.hse.nml.grammar.NmlParser.MemSizeContext ctx);
+	void exitMemAccess(NmlParser.MemAccessContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memType}.
+	 * Enter a parse tree produced by {@link NmlParser#memSize}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemType(ru.hse.nml.grammar.NmlParser.MemTypeContext ctx);
+	void enterMemSize(NmlParser.MemSizeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memType}.
+	 * Exit a parse tree produced by {@link NmlParser#memSize}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemType(ru.hse.nml.grammar.NmlParser.MemTypeContext ctx);
+	void exitMemSize(NmlParser.MemSizeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#varDef}.
+	 * Enter a parse tree produced by {@link NmlParser#memType}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarDef(ru.hse.nml.grammar.NmlParser.VarDefContext ctx);
+	void enterMemType(NmlParser.MemTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#varDef}.
+	 * Exit a parse tree produced by {@link NmlParser#memType}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarDef(ru.hse.nml.grammar.NmlParser.VarDefContext ctx);
+	void exitMemType(NmlParser.MemTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#varSizeType}.
+	 * Enter a parse tree produced by {@link NmlParser#varDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarSizeType(ru.hse.nml.grammar.NmlParser.VarSizeTypeContext ctx);
+	void enterVarDef(NmlParser.VarDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#varSizeType}.
+	 * Exit a parse tree produced by {@link NmlParser#varDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarSizeType(ru.hse.nml.grammar.NmlParser.VarSizeTypeContext ctx);
+	void exitVarDef(NmlParser.VarDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regDef}.
+	 * Enter a parse tree produced by {@link NmlParser#varSizeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRegDef(ru.hse.nml.grammar.NmlParser.RegDefContext ctx);
+	void enterVarSizeType(NmlParser.VarSizeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regDef}.
+	 * Exit a parse tree produced by {@link NmlParser#varSizeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRegDef(ru.hse.nml.grammar.NmlParser.RegDefContext ctx);
+	void exitVarSizeType(NmlParser.VarSizeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regSize}.
+	 * Enter a parse tree produced by {@link NmlParser#regDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterRegSize(ru.hse.nml.grammar.NmlParser.RegSizeContext ctx);
+	void enterRegDef(NmlParser.RegDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regSize}.
+	 * Exit a parse tree produced by {@link NmlParser#regDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitRegSize(ru.hse.nml.grammar.NmlParser.RegSizeContext ctx);
+	void exitRegDef(NmlParser.RegDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regType}.
+	 * Enter a parse tree produced by {@link NmlParser#regSize}.
 	 * @param ctx the parse tree
 	 */
-	void enterRegType(ru.hse.nml.grammar.NmlParser.RegTypeContext ctx);
+	void enterRegSize(NmlParser.RegSizeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regType}.
+	 * Exit a parse tree produced by {@link NmlParser#regSize}.
 	 * @param ctx the parse tree
 	 */
-	void exitRegType(ru.hse.nml.grammar.NmlParser.RegTypeContext ctx);
+	void exitRegSize(NmlParser.RegSizeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeDef}.
+	 * Enter a parse tree produced by {@link NmlParser#regType}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeDef(ru.hse.nml.grammar.NmlParser.ModeDefContext ctx);
+	void enterRegType(NmlParser.RegTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeDef}.
+	 * Exit a parse tree produced by {@link NmlParser#regType}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeDef(ru.hse.nml.grammar.NmlParser.ModeDefContext ctx);
+	void exitRegType(NmlParser.RegTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAccess}.
+	 * Enter a parse tree produced by {@link NmlParser#modeDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeAccess(ru.hse.nml.grammar.NmlParser.ModeAccessContext ctx);
+	void enterModeDef(NmlParser.ModeDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAccess}.
+	 * Exit a parse tree produced by {@link NmlParser#modeDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeAccess(ru.hse.nml.grammar.NmlParser.ModeAccessContext ctx);
+	void exitModeDef(NmlParser.ModeDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeType}.
+	 * Enter a parse tree produced by {@link NmlParser#modeAccess}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeType(ru.hse.nml.grammar.NmlParser.ModeTypeContext ctx);
+	void enterModeAccess(NmlParser.ModeAccessContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeType}.
+	 * Exit a parse tree produced by {@link NmlParser#modeAccess}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeType(ru.hse.nml.grammar.NmlParser.ModeTypeContext ctx);
+	void exitModeAccess(NmlParser.ModeAccessContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeOr}.
+	 * Enter a parse tree produced by {@link NmlParser#modeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeOr(ru.hse.nml.grammar.NmlParser.ModeOrContext ctx);
+	void enterModeType(NmlParser.ModeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeOr}.
+	 * Exit a parse tree produced by {@link NmlParser#modeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeOr(ru.hse.nml.grammar.NmlParser.ModeOrContext ctx);
+	void exitModeType(NmlParser.ModeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAnd}.
+	 * Enter a parse tree produced by {@link NmlParser#modeOr}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeAnd(ru.hse.nml.grammar.NmlParser.ModeAndContext ctx);
+	void enterModeOr(NmlParser.ModeOrContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAnd}.
+	 * Exit a parse tree produced by {@link NmlParser#modeOr}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeAnd(ru.hse.nml.grammar.NmlParser.ModeAndContext ctx);
+	void exitModeOr(NmlParser.ModeOrContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeParamList}.
+	 * Enter a parse tree produced by {@link NmlParser#modeAnd}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeParamList(ru.hse.nml.grammar.NmlParser.ModeParamListContext ctx);
+	void enterModeAnd(NmlParser.ModeAndContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeParamList}.
+	 * Exit a parse tree produced by {@link NmlParser#modeAnd}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeParamList(ru.hse.nml.grammar.NmlParser.ModeParamListContext ctx);
+	void exitModeAnd(NmlParser.ModeAndContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAssignPart}.
+	 * Enter a parse tree produced by {@link NmlParser#modeParamList}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeAssignPart(ru.hse.nml.grammar.NmlParser.ModeAssignPartContext ctx);
+	void enterModeParamList(NmlParser.ModeParamListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAssignPart}.
+	 * Exit a parse tree produced by {@link NmlParser#modeParamList}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeAssignPart(ru.hse.nml.grammar.NmlParser.ModeAssignPartContext ctx);
+	void exitModeParamList(NmlParser.ModeParamListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAssignPartMini}.
+	 * Enter a parse tree produced by {@link NmlParser#modeAssignPart}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeAssignPartMini(ru.hse.nml.grammar.NmlParser.ModeAssignPartMiniContext ctx);
+	void enterModeAssignPart(NmlParser.ModeAssignPartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAssignPartMini}.
+	 * Exit a parse tree produced by {@link NmlParser#modeAssignPart}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeAssignPartMini(ru.hse.nml.grammar.NmlParser.ModeAssignPartMiniContext ctx);
+	void exitModeAssignPart(NmlParser.ModeAssignPartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAttrList}.
+	 * Enter a parse tree produced by {@link NmlParser#modeAssignPartMini}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeAttrList(ru.hse.nml.grammar.NmlParser.ModeAttrListContext ctx);
+	void enterModeAssignPartMini(NmlParser.ModeAssignPartMiniContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAttrList}.
+	 * Exit a parse tree produced by {@link NmlParser#modeAssignPartMini}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeAttrList(ru.hse.nml.grammar.NmlParser.ModeAttrListContext ctx);
+	void exitModeAssignPartMini(NmlParser.ModeAssignPartMiniContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignInitPart}.
+	 * Enter a parse tree produced by {@link NmlParser#modeAttrList}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignInitPart(ru.hse.nml.grammar.NmlParser.AssignInitPartContext ctx);
+	void enterModeAttrList(NmlParser.ModeAttrListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignInitPart}.
+	 * Exit a parse tree produced by {@link NmlParser#modeAttrList}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignInitPart(ru.hse.nml.grammar.NmlParser.AssignInitPartContext ctx);
+	void exitModeAttrList(NmlParser.ModeAttrListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeSyntaxPart}.
+	 * Enter a parse tree produced by {@link NmlParser#assignInitPart}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeSyntaxPart(ru.hse.nml.grammar.NmlParser.ModeSyntaxPartContext ctx);
+	void enterAssignInitPart(NmlParser.AssignInitPartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeSyntaxPart}.
+	 * Exit a parse tree produced by {@link NmlParser#assignInitPart}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeSyntaxPart(ru.hse.nml.grammar.NmlParser.ModeSyntaxPartContext ctx);
+	void exitAssignInitPart(NmlParser.AssignInitPartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeImagePart}.
+	 * Enter a parse tree produced by {@link NmlParser#modeSyntaxPart}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeImagePart(ru.hse.nml.grammar.NmlParser.ModeImagePartContext ctx);
+	void enterModeSyntaxPart(NmlParser.ModeSyntaxPartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeImagePart}.
+	 * Exit a parse tree produced by {@link NmlParser#modeSyntaxPart}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeImagePart(ru.hse.nml.grammar.NmlParser.ModeImagePartContext ctx);
+	void exitModeSyntaxPart(NmlParser.ModeSyntaxPartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeActionPart}.
+	 * Enter a parse tree produced by {@link NmlParser#modeImagePart}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeActionPart(ru.hse.nml.grammar.NmlParser.ModeActionPartContext ctx);
+	void enterModeImagePart(NmlParser.ModeImagePartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeActionPart}.
+	 * Exit a parse tree produced by {@link NmlParser#modeImagePart}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeActionPart(ru.hse.nml.grammar.NmlParser.ModeActionPartContext ctx);
+	void exitModeImagePart(NmlParser.ModeImagePartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeRev}.
+	 * Enter a parse tree produced by {@link NmlParser#modeActionPart}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeRev(ru.hse.nml.grammar.NmlParser.ModeRevContext ctx);
+	void enterModeActionPart(NmlParser.ModeActionPartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeRev}.
+	 * Exit a parse tree produced by {@link NmlParser#modeActionPart}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeRev(ru.hse.nml.grammar.NmlParser.ModeRevContext ctx);
+	void exitModeActionPart(NmlParser.ModeActionPartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeSyntax}.
+	 * Enter a parse tree produced by {@link NmlParser#modeRev}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeSyntax(ru.hse.nml.grammar.NmlParser.ModeSyntaxContext ctx);
+	void enterModeRev(NmlParser.ModeRevContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeSyntax}.
+	 * Exit a parse tree produced by {@link NmlParser#modeRev}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeSyntax(ru.hse.nml.grammar.NmlParser.ModeSyntaxContext ctx);
+	void exitModeRev(NmlParser.ModeRevContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeImage}.
+	 * Enter a parse tree produced by {@link NmlParser#modeSyntax}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeImage(ru.hse.nml.grammar.NmlParser.ModeImageContext ctx);
+	void enterModeSyntax(NmlParser.ModeSyntaxContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeImage}.
+	 * Exit a parse tree produced by {@link NmlParser#modeSyntax}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeImage(ru.hse.nml.grammar.NmlParser.ModeImageContext ctx);
+	void exitModeSyntax(NmlParser.ModeSyntaxContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAction}.
+	 * Enter a parse tree produced by {@link NmlParser#modeImage}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeAction(ru.hse.nml.grammar.NmlParser.ModeActionContext ctx);
+	void enterModeImage(NmlParser.ModeImageContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAction}.
+	 * Exit a parse tree produced by {@link NmlParser#modeImage}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeAction(ru.hse.nml.grammar.NmlParser.ModeActionContext ctx);
+	void exitModeImage(NmlParser.ModeImageContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opDef}.
+	 * Enter a parse tree produced by {@link NmlParser#modeAction}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpDef(ru.hse.nml.grammar.NmlParser.OpDefContext ctx);
+	void enterModeAction(NmlParser.ModeActionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opDef}.
+	 * Exit a parse tree produced by {@link NmlParser#modeAction}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpDef(ru.hse.nml.grammar.NmlParser.OpDefContext ctx);
+	void exitModeAction(NmlParser.ModeActionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opNonException}.
+	 * Enter a parse tree produced by {@link NmlParser#opDef}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpNonException(ru.hse.nml.grammar.NmlParser.OpNonExceptionContext ctx);
+	void enterOpDef(NmlParser.OpDefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opNonException}.
+	 * Exit a parse tree produced by {@link NmlParser#opDef}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpNonException(ru.hse.nml.grammar.NmlParser.OpNonExceptionContext ctx);
+	void exitOpDef(NmlParser.OpDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAccess}.
+	 * Enter a parse tree produced by {@link NmlParser#opAccess}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpAccess(ru.hse.nml.grammar.NmlParser.OpAccessContext ctx);
+	void enterOpAccess(NmlParser.OpAccessContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAccess}.
+	 * Exit a parse tree produced by {@link NmlParser#opAccess}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpAccess(ru.hse.nml.grammar.NmlParser.OpAccessContext ctx);
+	void exitOpAccess(NmlParser.OpAccessContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opType}.
+	 * Enter a parse tree produced by {@link NmlParser#opType}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpType(ru.hse.nml.grammar.NmlParser.OpTypeContext ctx);
+	void enterOpType(NmlParser.OpTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opType}.
+	 * Exit a parse tree produced by {@link NmlParser#opType}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpType(ru.hse.nml.grammar.NmlParser.OpTypeContext ctx);
+	void exitOpType(NmlParser.OpTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAndRule}.
+	 * Enter a parse tree produced by {@link NmlParser#opAndRule}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpAndRule(ru.hse.nml.grammar.NmlParser.OpAndRuleContext ctx);
+	void enterOpAndRule(NmlParser.OpAndRuleContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAndRule}.
+	 * Exit a parse tree produced by {@link NmlParser#opAndRule}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpAndRule(ru.hse.nml.grammar.NmlParser.OpAndRuleContext ctx);
+	void exitOpAndRule(NmlParser.OpAndRuleContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opException}.
+	 * Enter a parse tree produced by {@link NmlParser#opOrRule}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpException(ru.hse.nml.grammar.NmlParser.OpExceptionContext ctx);
+	void enterOpOrRule(NmlParser.OpOrRuleContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opException}.
+	 * Exit a parse tree produced by {@link NmlParser#opOrRule}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpException(ru.hse.nml.grammar.NmlParser.OpExceptionContext ctx);
+	void exitOpOrRule(NmlParser.OpOrRuleContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opOrRule}.
+	 * Enter a parse tree produced by {@link NmlParser#opParameterList}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpOrRule(ru.hse.nml.grammar.NmlParser.OpOrRuleContext ctx);
+	void enterOpParameterList(NmlParser.OpParameterListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opOrRule}.
+	 * Exit a parse tree produced by {@link NmlParser#opParameterList}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpOrRule(ru.hse.nml.grammar.NmlParser.OpOrRuleContext ctx);
+	void exitOpParameterList(NmlParser.OpParameterListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opParameterList}.
+	 * Enter a parse tree produced by {@link NmlParser#opParameter}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpParameterList(ru.hse.nml.grammar.NmlParser.OpParameterListContext ctx);
+	void enterOpParameter(NmlParser.OpParameterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opParameterList}.
+	 * Exit a parse tree produced by {@link NmlParser#opParameter}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpParameterList(ru.hse.nml.grammar.NmlParser.OpParameterListContext ctx);
+	void exitOpParameter(NmlParser.OpParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opParameter}.
+	 * Enter a parse tree produced by {@link NmlParser#opAttrList}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpParameter(ru.hse.nml.grammar.NmlParser.OpParameterContext ctx);
+	void enterOpAttrList(NmlParser.OpAttrListContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opParameter}.
+	 * Exit a parse tree produced by {@link NmlParser#opAttrList}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpParameter(ru.hse.nml.grammar.NmlParser.OpParameterContext ctx);
+	void exitOpAttrList(NmlParser.OpAttrListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAttrList}.
+	 * Enter a parse tree produced by {@link NmlParser#opSyntax}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpAttrList(ru.hse.nml.grammar.NmlParser.OpAttrListContext ctx);
+	void enterOpSyntax(NmlParser.OpSyntaxContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAttrList}.
+	 * Exit a parse tree produced by {@link NmlParser#opSyntax}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpAttrList(ru.hse.nml.grammar.NmlParser.OpAttrListContext ctx);
+	void exitOpSyntax(NmlParser.OpSyntaxContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opSyntax}.
+	 * Enter a parse tree produced by {@link NmlParser#opImage}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpSyntax(ru.hse.nml.grammar.NmlParser.OpSyntaxContext ctx);
+	void enterOpImage(NmlParser.OpImageContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opSyntax}.
+	 * Exit a parse tree produced by {@link NmlParser#opImage}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpSyntax(ru.hse.nml.grammar.NmlParser.OpSyntaxContext ctx);
+	void exitOpImage(NmlParser.OpImageContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opImage}.
+	 * Enter a parse tree produced by {@link NmlParser#opAction}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpImage(ru.hse.nml.grammar.NmlParser.OpImageContext ctx);
+	void enterOpAction(NmlParser.OpActionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opImage}.
+	 * Exit a parse tree produced by {@link NmlParser#opAction}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpImage(ru.hse.nml.grammar.NmlParser.OpImageContext ctx);
+	void exitOpAction(NmlParser.OpActionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAction}.
+	 * Enter a parse tree produced by {@link NmlParser#sequence}.
 	 * @param ctx the parse tree
 	 */
-	void enterOpAction(ru.hse.nml.grammar.NmlParser.OpActionContext ctx);
+	void enterSequence(NmlParser.SequenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAction}.
+	 * Exit a parse tree produced by {@link NmlParser#sequence}.
 	 * @param ctx the parse tree
 	 */
-	void exitOpAction(ru.hse.nml.grammar.NmlParser.OpActionContext ctx);
+	void exitSequence(NmlParser.SequenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sequence}.
+	 * Enter a parse tree produced by {@link NmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterSequence(ru.hse.nml.grammar.NmlParser.SequenceContext ctx);
+	void enterStatement(NmlParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sequence}.
+	 * Exit a parse tree produced by {@link NmlParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitSequence(ru.hse.nml.grammar.NmlParser.SequenceContext ctx);
+	void exitStatement(NmlParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#statement}.
+	 * Enter a parse tree produced by {@link NmlParser#regularStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(ru.hse.nml.grammar.NmlParser.StatementContext ctx);
+	void enterRegularStatement(NmlParser.RegularStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#statement}.
+	 * Exit a parse tree produced by {@link NmlParser#regularStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(ru.hse.nml.grammar.NmlParser.StatementContext ctx);
+	void exitRegularStatement(NmlParser.RegularStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regularStatement}.
+	 * Enter a parse tree produced by {@link NmlParser#callStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRegularStatement(ru.hse.nml.grammar.NmlParser.RegularStatementContext ctx);
+	void enterCallStatement(NmlParser.CallStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regularStatement}.
+	 * Exit a parse tree produced by {@link NmlParser#callStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRegularStatement(ru.hse.nml.grammar.NmlParser.RegularStatementContext ctx);
+	void exitCallStatement(NmlParser.CallStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#callStatement}.
+	 * Enter a parse tree produced by {@link NmlParser#assignStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterCallStatement(ru.hse.nml.grammar.NmlParser.CallStatementContext ctx);
+	void enterAssignStatement(NmlParser.AssignStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#callStatement}.
+	 * Exit a parse tree produced by {@link NmlParser#assignStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitCallStatement(ru.hse.nml.grammar.NmlParser.CallStatementContext ctx);
+	void exitAssignStatement(NmlParser.AssignStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatement}.
+	 * Enter a parse tree produced by {@link NmlParser#assignStatementRightParen}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignStatement(ru.hse.nml.grammar.NmlParser.AssignStatementContext ctx);
+	void enterAssignStatementRightParen(NmlParser.AssignStatementRightParenContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatement}.
+	 * Exit a parse tree produced by {@link NmlParser#assignStatementRightParen}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignStatement(ru.hse.nml.grammar.NmlParser.AssignStatementContext ctx);
+	void exitAssignStatementRightParen(NmlParser.AssignStatementRightParenContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRightParen}.
+	 * Enter a parse tree produced by {@link NmlParser#assignStatementRight}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignStatementRightParen(ru.hse.nml.grammar.NmlParser.AssignStatementRightParenContext ctx);
+	void enterAssignStatementRight(NmlParser.AssignStatementRightContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRightParen}.
+	 * Exit a parse tree produced by {@link NmlParser#assignStatementRight}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignStatementRightParen(ru.hse.nml.grammar.NmlParser.AssignStatementRightParenContext ctx);
+	void exitAssignStatementRight(NmlParser.AssignStatementRightContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRight}.
+	 * Enter a parse tree produced by {@link NmlParser#assignStatementRightVar}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignStatementRight(ru.hse.nml.grammar.NmlParser.AssignStatementRightContext ctx);
+	void enterAssignStatementRightVar(NmlParser.AssignStatementRightVarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRight}.
+	 * Exit a parse tree produced by {@link NmlParser#assignStatementRightVar}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignStatementRight(ru.hse.nml.grammar.NmlParser.AssignStatementRightContext ctx);
+	void exitAssignStatementRightVar(NmlParser.AssignStatementRightVarContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRightVar}.
+	 * Enter a parse tree produced by {@link NmlParser#exceptionStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignStatementRightVar(ru.hse.nml.grammar.NmlParser.AssignStatementRightVarContext ctx);
+	void enterExceptionStatement(NmlParser.ExceptionStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRightVar}.
+	 * Exit a parse tree produced by {@link NmlParser#exceptionStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignStatementRightVar(ru.hse.nml.grammar.NmlParser.AssignStatementRightVarContext ctx);
+	void exitExceptionStatement(NmlParser.ExceptionStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#exceptionStatement}.
+	 * Enter a parse tree produced by {@link NmlParser#markStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterExceptionStatement(ru.hse.nml.grammar.NmlParser.ExceptionStatementContext ctx);
+	void enterMarkStatement(NmlParser.MarkStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#exceptionStatement}.
+	 * Exit a parse tree produced by {@link NmlParser#markStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitExceptionStatement(ru.hse.nml.grammar.NmlParser.ExceptionStatementContext ctx);
+	void exitMarkStatement(NmlParser.MarkStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#markStatement}.
+	 * Enter a parse tree produced by {@link NmlParser#conditionalStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterMarkStatement(ru.hse.nml.grammar.NmlParser.MarkStatementContext ctx);
+	void enterConditionalStatement(NmlParser.ConditionalStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#markStatement}.
+	 * Exit a parse tree produced by {@link NmlParser#conditionalStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitMarkStatement(ru.hse.nml.grammar.NmlParser.MarkStatementContext ctx);
+	void exitConditionalStatement(NmlParser.ConditionalStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#conditionalStatement}.
+	 * Enter a parse tree produced by {@link NmlParser#booleanState}.
 	 * @param ctx the parse tree
 	 */
-	void enterConditionalStatement(ru.hse.nml.grammar.NmlParser.ConditionalStatementContext ctx);
+	void enterBooleanState(NmlParser.BooleanStateContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#conditionalStatement}.
+	 * Exit a parse tree produced by {@link NmlParser#booleanState}.
 	 * @param ctx the parse tree
 	 */
-	void exitConditionalStatement(ru.hse.nml.grammar.NmlParser.ConditionalStatementContext ctx);
+	void exitBooleanState(NmlParser.BooleanStateContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#booleanState}.
+	 * Enter a parse tree produced by {@link NmlParser#booleanVal}.
 	 * @param ctx the parse tree
 	 */
-	void enterBooleanState(ru.hse.nml.grammar.NmlParser.BooleanStateContext ctx);
+	void enterBooleanVal(NmlParser.BooleanValContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#booleanState}.
+	 * Exit a parse tree produced by {@link NmlParser#booleanVal}.
 	 * @param ctx the parse tree
 	 */
-	void exitBooleanState(ru.hse.nml.grammar.NmlParser.BooleanStateContext ctx);
+	void exitBooleanVal(NmlParser.BooleanValContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#booleanVal}.
+	 * Enter a parse tree produced by {@link NmlParser#elifState}.
 	 * @param ctx the parse tree
 	 */
-	void enterBooleanVal(ru.hse.nml.grammar.NmlParser.BooleanValContext ctx);
+	void enterElifState(NmlParser.ElifStateContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#booleanVal}.
+	 * Exit a parse tree produced by {@link NmlParser#elifState}.
 	 * @param ctx the parse tree
 	 */
-	void exitBooleanVal(ru.hse.nml.grammar.NmlParser.BooleanValContext ctx);
+	void exitElifState(NmlParser.ElifStateContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#elifState}.
+	 * Enter a parse tree produced by {@link NmlParser#format}.
 	 * @param ctx the parse tree
 	 */
-	void enterElifState(ru.hse.nml.grammar.NmlParser.ElifStateContext ctx);
+	void enterFormat(NmlParser.FormatContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#elifState}.
+	 * Exit a parse tree produced by {@link NmlParser#format}.
 	 * @param ctx the parse tree
 	 */
-	void exitElifState(ru.hse.nml.grammar.NmlParser.ElifStateContext ctx);
+	void exitFormat(NmlParser.FormatContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#format}.
+	 * Enter a parse tree produced by {@link NmlParser#formatString}.
 	 * @param ctx the parse tree
 	 */
-	void enterFormat(ru.hse.nml.grammar.NmlParser.FormatContext ctx);
+	void enterFormatString(NmlParser.FormatStringContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#format}.
+	 * Exit a parse tree produced by {@link NmlParser#formatString}.
 	 * @param ctx the parse tree
 	 */
-	void exitFormat(ru.hse.nml.grammar.NmlParser.FormatContext ctx);
+	void exitFormatString(NmlParser.FormatStringContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatString}.
+	 * Enter a parse tree produced by {@link NmlParser#formatParameter}.
 	 * @param ctx the parse tree
 	 */
-	void enterFormatString(ru.hse.nml.grammar.NmlParser.FormatStringContext ctx);
+	void enterFormatParameter(NmlParser.FormatParameterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatString}.
+	 * Exit a parse tree produced by {@link NmlParser#formatParameter}.
 	 * @param ctx the parse tree
 	 */
-	void exitFormatString(ru.hse.nml.grammar.NmlParser.FormatStringContext ctx);
+	void exitFormatParameter(NmlParser.FormatParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatParameter}.
+	 * Enter a parse tree produced by {@link NmlParser#formatParameterMini}.
 	 * @param ctx the parse tree
 	 */
-	void enterFormatParameter(ru.hse.nml.grammar.NmlParser.FormatParameterContext ctx);
+	void enterFormatParameterMini(NmlParser.FormatParameterMiniContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatParameter}.
+	 * Exit a parse tree produced by {@link NmlParser#formatParameterMini}.
 	 * @param ctx the parse tree
 	 */
-	void exitFormatParameter(ru.hse.nml.grammar.NmlParser.FormatParameterContext ctx);
+	void exitFormatParameterMini(NmlParser.FormatParameterMiniContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatParameterMini}.
+	 * Enter a parse tree produced by {@link NmlParser#syntaImageActionCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterFormatParameterMini(ru.hse.nml.grammar.NmlParser.FormatParameterMiniContext ctx);
+	void enterSyntaImageActionCall(NmlParser.SyntaImageActionCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatParameterMini}.
+	 * Exit a parse tree produced by {@link NmlParser#syntaImageActionCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitFormatParameterMini(ru.hse.nml.grammar.NmlParser.FormatParameterMiniContext ctx);
+	void exitSyntaImageActionCall(NmlParser.SyntaImageActionCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#syntaImageActionCall}.
+	 * Enter a parse tree produced by {@link NmlParser#sIAPar}.
 	 * @param ctx the parse tree
 	 */
-	void enterSyntaImageActionCall(ru.hse.nml.grammar.NmlParser.SyntaImageActionCallContext ctx);
+	void enterSIAPar(NmlParser.SIAParContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#syntaImageActionCall}.
+	 * Exit a parse tree produced by {@link NmlParser#sIAPar}.
 	 * @param ctx the parse tree
 	 */
-	void exitSyntaImageActionCall(ru.hse.nml.grammar.NmlParser.SyntaImageActionCallContext ctx);
+	void exitSIAPar(NmlParser.SIAParContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sIAPar}.
+	 * Enter a parse tree produced by {@link NmlParser#sIAParMini}.
 	 * @param ctx the parse tree
 	 */
-	void enterSIAPar(ru.hse.nml.grammar.NmlParser.SIAParContext ctx);
+	void enterSIAParMini(NmlParser.SIAParMiniContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sIAPar}.
+	 * Exit a parse tree produced by {@link NmlParser#sIAParMini}.
 	 * @param ctx the parse tree
 	 */
-	void exitSIAPar(ru.hse.nml.grammar.NmlParser.SIAParContext ctx);
+	void exitSIAParMini(NmlParser.SIAParMiniContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sIAParMini}.
+	 * Enter a parse tree produced by {@link NmlParser#modeCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterSIAParMini(ru.hse.nml.grammar.NmlParser.SIAParMiniContext ctx);
+	void enterModeCall(NmlParser.ModeCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sIAParMini}.
+	 * Exit a parse tree produced by {@link NmlParser#modeCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitSIAParMini(ru.hse.nml.grammar.NmlParser.SIAParMiniContext ctx);
+	void exitModeCall(NmlParser.ModeCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeCall}.
+	 * Enter a parse tree produced by {@link NmlParser#location}.
 	 * @param ctx the parse tree
 	 */
-	void enterModeCall(ru.hse.nml.grammar.NmlParser.ModeCallContext ctx);
+	void enterLocation(NmlParser.LocationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeCall}.
+	 * Exit a parse tree produced by {@link NmlParser#location}.
 	 * @param ctx the parse tree
 	 */
-	void exitModeCall(ru.hse.nml.grammar.NmlParser.ModeCallContext ctx);
+	void exitLocation(NmlParser.LocationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#location}.
+	 * Enter a parse tree produced by {@link NmlParser#locationNoDot}.
 	 * @param ctx the parse tree
 	 */
-	void enterLocation(ru.hse.nml.grammar.NmlParser.LocationContext ctx);
+	void enterLocationNoDot(NmlParser.LocationNoDotContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#location}.
+	 * Exit a parse tree produced by {@link NmlParser#locationNoDot}.
 	 * @param ctx the parse tree
 	 */
-	void exitLocation(ru.hse.nml.grammar.NmlParser.LocationContext ctx);
+	void exitLocationNoDot(NmlParser.LocationNoDotContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationNoDot}.
+	 * Enter a parse tree produced by {@link NmlParser#locationDCol}.
 	 * @param ctx the parse tree
 	 */
-	void enterLocationNoDot(ru.hse.nml.grammar.NmlParser.LocationNoDotContext ctx);
+	void enterLocationDCol(NmlParser.LocationDColContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationNoDot}.
+	 * Exit a parse tree produced by {@link NmlParser#locationDCol}.
 	 * @param ctx the parse tree
 	 */
-	void exitLocationNoDot(ru.hse.nml.grammar.NmlParser.LocationNoDotContext ctx);
+	void exitLocationDCol(NmlParser.LocationDColContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationDCol}.
+	 * Enter a parse tree produced by {@link NmlParser#locationDColNoDot}.
 	 * @param ctx the parse tree
 	 */
-	void enterLocationDCol(ru.hse.nml.grammar.NmlParser.LocationDColContext ctx);
+	void enterLocationDColNoDot(NmlParser.LocationDColNoDotContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationDCol}.
+	 * Exit a parse tree produced by {@link NmlParser#locationDColNoDot}.
 	 * @param ctx the parse tree
 	 */
-	void exitLocationDCol(ru.hse.nml.grammar.NmlParser.LocationDColContext ctx);
+	void exitLocationDColNoDot(NmlParser.LocationDColNoDotContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationDColNoDot}.
+	 * Enter a parse tree produced by {@link NmlParser#zero_extend}.
 	 * @param ctx the parse tree
 	 */
-	void enterLocationDColNoDot(ru.hse.nml.grammar.NmlParser.LocationDColNoDotContext ctx);
+	void enterZero_extend(NmlParser.Zero_extendContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationDColNoDot}.
+	 * Exit a parse tree produced by {@link NmlParser#zero_extend}.
 	 * @param ctx the parse tree
 	 */
-	void exitLocationDColNoDot(ru.hse.nml.grammar.NmlParser.LocationDColNoDotContext ctx);
+	void exitZero_extend(NmlParser.Zero_extendContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#zero_extend}.
+	 * Enter a parse tree produced by {@link NmlParser#sign_extend}.
 	 * @param ctx the parse tree
 	 */
-	void enterZero_extend(ru.hse.nml.grammar.NmlParser.Zero_extendContext ctx);
+	void enterSign_extend(NmlParser.Sign_extendContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#zero_extend}.
+	 * Exit a parse tree produced by {@link NmlParser#sign_extend}.
 	 * @param ctx the parse tree
 	 */
-	void exitZero_extend(ru.hse.nml.grammar.NmlParser.Zero_extendContext ctx);
+	void exitSign_extend(NmlParser.Sign_extendContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sign_extend}.
+	 * Enter a parse tree produced by {@link NmlParser#coerce}.
 	 * @param ctx the parse tree
 	 */
-	void enterSign_extend(ru.hse.nml.grammar.NmlParser.Sign_extendContext ctx);
+	void enterCoerce(NmlParser.CoerceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sign_extend}.
+	 * Exit a parse tree produced by {@link NmlParser#coerce}.
 	 * @param ctx the parse tree
 	 */
-	void exitSign_extend(ru.hse.nml.grammar.NmlParser.Sign_extendContext ctx);
+	void exitCoerce(NmlParser.CoerceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerce}.
+	 * Enter a parse tree produced by {@link NmlParser#coerceType}.
 	 * @param ctx the parse tree
 	 */
-	void enterCoerce(ru.hse.nml.grammar.NmlParser.CoerceContext ctx);
+	void enterCoerceType(NmlParser.CoerceTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerce}.
+	 * Exit a parse tree produced by {@link NmlParser#coerceType}.
 	 * @param ctx the parse tree
 	 */
-	void exitCoerce(ru.hse.nml.grammar.NmlParser.CoerceContext ctx);
+	void exitCoerceType(NmlParser.CoerceTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerceType}.
+	 * Enter a parse tree produced by {@link NmlParser#coerceNumber}.
 	 * @param ctx the parse tree
 	 */
-	void enterCoerceType(ru.hse.nml.grammar.NmlParser.CoerceTypeContext ctx);
+	void enterCoerceNumber(NmlParser.CoerceNumberContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerceType}.
+	 * Exit a parse tree produced by {@link NmlParser#coerceNumber}.
 	 * @param ctx the parse tree
 	 */
-	void exitCoerceType(ru.hse.nml.grammar.NmlParser.CoerceTypeContext ctx);
+	void exitCoerceNumber(NmlParser.CoerceNumberContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerceNumber}.
+	 * Enter a parse tree produced by {@link NmlParser#cast}.
 	 * @param ctx the parse tree
 	 */
-	void enterCoerceNumber(ru.hse.nml.grammar.NmlParser.CoerceNumberContext ctx);
+	void enterCast(NmlParser.CastContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerceNumber}.
+	 * Exit a parse tree produced by {@link NmlParser#cast}.
 	 * @param ctx the parse tree
 	 */
-	void exitCoerceNumber(ru.hse.nml.grammar.NmlParser.CoerceNumberContext ctx);
+	void exitCast(NmlParser.CastContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#cast}.
+	 * Enter a parse tree produced by {@link NmlParser#castType}.
 	 * @param ctx the parse tree
 	 */
-	void enterCast(ru.hse.nml.grammar.NmlParser.CastContext ctx);
+	void enterCastType(NmlParser.CastTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#cast}.
+	 * Exit a parse tree produced by {@link NmlParser#castType}.
 	 * @param ctx the parse tree
 	 */
-	void exitCast(ru.hse.nml.grammar.NmlParser.CastContext ctx);
+	void exitCastType(NmlParser.CastTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castType}.
+	 * Enter a parse tree produced by {@link NmlParser#castNumberPart}.
 	 * @param ctx the parse tree
 	 */
-	void enterCastType(ru.hse.nml.grammar.NmlParser.CastTypeContext ctx);
+	void enterCastNumberPart(NmlParser.CastNumberPartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castType}.
+	 * Exit a parse tree produced by {@link NmlParser#castNumberPart}.
 	 * @param ctx the parse tree
 	 */
-	void exitCastType(ru.hse.nml.grammar.NmlParser.CastTypeContext ctx);
+	void exitCastNumberPart(NmlParser.CastNumberPartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castNumberPart}.
+	 * Enter a parse tree produced by {@link NmlParser#castNumber}.
 	 * @param ctx the parse tree
 	 */
-	void enterCastNumberPart(ru.hse.nml.grammar.NmlParser.CastNumberPartContext ctx);
+	void enterCastNumber(NmlParser.CastNumberContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castNumberPart}.
+	 * Exit a parse tree produced by {@link NmlParser#castNumber}.
 	 * @param ctx the parse tree
 	 */
-	void exitCastNumberPart(ru.hse.nml.grammar.NmlParser.CastNumberPartContext ctx);
+	void exitCastNumber(NmlParser.CastNumberContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castNumber}.
+	 * Enter a parse tree produced by {@link NmlParser#trace}.
 	 * @param ctx the parse tree
 	 */
-	void enterCastNumber(ru.hse.nml.grammar.NmlParser.CastNumberContext ctx);
+	void enterTrace(NmlParser.TraceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castNumber}.
+	 * Exit a parse tree produced by {@link NmlParser#trace}.
 	 * @param ctx the parse tree
 	 */
-	void exitCastNumber(ru.hse.nml.grammar.NmlParser.CastNumberContext ctx);
+	void exitTrace(NmlParser.TraceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#trace}.
+	 * Enter a parse tree produced by {@link NmlParser#traceString}.
 	 * @param ctx the parse tree
 	 */
-	void enterTrace(ru.hse.nml.grammar.NmlParser.TraceContext ctx);
+	void enterTraceString(NmlParser.TraceStringContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#trace}.
+	 * Exit a parse tree produced by {@link NmlParser#traceString}.
 	 * @param ctx the parse tree
 	 */
-	void exitTrace(ru.hse.nml.grammar.NmlParser.TraceContext ctx);
+	void exitTraceString(NmlParser.TraceStringContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceString}.
+	 * Enter a parse tree produced by {@link NmlParser#traceVars}.
 	 * @param ctx the parse tree
 	 */
-	void enterTraceString(ru.hse.nml.grammar.NmlParser.TraceStringContext ctx);
+	void enterTraceVars(NmlParser.TraceVarsContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceString}.
+	 * Exit a parse tree produced by {@link NmlParser#traceVars}.
 	 * @param ctx the parse tree
 	 */
-	void exitTraceString(ru.hse.nml.grammar.NmlParser.TraceStringContext ctx);
+	void exitTraceVars(NmlParser.TraceVarsContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceVars}.
+	 * Enter a parse tree produced by {@link NmlParser#traceVar}.
 	 * @param ctx the parse tree
 	 */
-	void enterTraceVars(ru.hse.nml.grammar.NmlParser.TraceVarsContext ctx);
+	void enterTraceVar(NmlParser.TraceVarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceVars}.
+	 * Exit a parse tree produced by {@link NmlParser#traceVar}.
 	 * @param ctx the parse tree
 	 */
-	void exitTraceVars(ru.hse.nml.grammar.NmlParser.TraceVarsContext ctx);
+	void exitTraceVar(NmlParser.TraceVarContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceVar}.
+	 * Enter a parse tree produced by {@link NmlParser#memoryAddressDCol}.
 	 * @param ctx the parse tree
 	 */
-	void enterTraceVar(ru.hse.nml.grammar.NmlParser.TraceVarContext ctx);
+	void enterMemoryAddressDCol(NmlParser.MemoryAddressDColContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceVar}.
+	 * Exit a parse tree produced by {@link NmlParser#memoryAddressDCol}.
 	 * @param ctx the parse tree
 	 */
-	void exitTraceVar(ru.hse.nml.grammar.NmlParser.TraceVarContext ctx);
+	void exitMemoryAddressDCol(NmlParser.MemoryAddressDColContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memoryAddressDCol}.
+	 * Enter a parse tree produced by {@link NmlParser#memoryAddress}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemoryAddressDCol(ru.hse.nml.grammar.NmlParser.MemoryAddressDColContext ctx);
+	void enterMemoryAddress(NmlParser.MemoryAddressContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memoryAddressDCol}.
+	 * Exit a parse tree produced by {@link NmlParser#memoryAddress}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemoryAddressDCol(ru.hse.nml.grammar.NmlParser.MemoryAddressDColContext ctx);
+	void exitMemoryAddress(NmlParser.MemoryAddressContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memoryAddress}.
+	 * Enter a parse tree produced by {@link NmlParser#memTypePart}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemoryAddress(ru.hse.nml.grammar.NmlParser.MemoryAddressContext ctx);
+	void enterMemTypePart(NmlParser.MemTypePartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memoryAddress}.
+	 * Exit a parse tree produced by {@link NmlParser#memTypePart}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemoryAddress(ru.hse.nml.grammar.NmlParser.MemoryAddressContext ctx);
+	void exitMemTypePart(NmlParser.MemTypePartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memTypePart}.
+	 * Enter a parse tree produced by {@link NmlParser#operatorArith}.
 	 * @param ctx the parse tree
 	 */
-	void enterMemTypePart(ru.hse.nml.grammar.NmlParser.MemTypePartContext ctx);
+	void enterOperatorArith(NmlParser.OperatorArithContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memTypePart}.
+	 * Exit a parse tree produced by {@link NmlParser#operatorArith}.
 	 * @param ctx the parse tree
 	 */
-	void exitMemTypePart(ru.hse.nml.grammar.NmlParser.MemTypePartContext ctx);
+	void exitOperatorArith(NmlParser.OperatorArithContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#operatorArith}.
+	 * Enter a parse tree produced by {@link NmlParser#operatorCompare}.
 	 * @param ctx the parse tree
 	 */
-	void enterOperatorArith(ru.hse.nml.grammar.NmlParser.OperatorArithContext ctx);
+	void enterOperatorCompare(NmlParser.OperatorCompareContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#operatorArith}.
+	 * Exit a parse tree produced by {@link NmlParser#operatorCompare}.
 	 * @param ctx the parse tree
 	 */
-	void exitOperatorArith(ru.hse.nml.grammar.NmlParser.OperatorArithContext ctx);
+	void exitOperatorCompare(NmlParser.OperatorCompareContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#operatorCompare}.
+	 * Enter a parse tree produced by {@link NmlParser#numberExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterOperatorCompare(ru.hse.nml.grammar.NmlParser.OperatorCompareContext ctx);
+	void enterNumberExpr(NmlParser.NumberExprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#operatorCompare}.
-	 * @param ctx the parse tree
-	 */
-	void exitOperatorCompare(ru.hse.nml.grammar.NmlParser.OperatorCompareContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#numberExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterNumberExpr(ru.hse.nml.grammar.NmlParser.NumberExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#numberExpr}.
+	 * Exit a parse tree produced by {@link NmlParser#numberExpr}.
 	 * @param ctx the parse tree
 	 */
 	void exitNumberExpr(NmlParser.NumberExprContext ctx);

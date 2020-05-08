@@ -8,7 +8,6 @@ import com.intellij.psi.tree.IElementType;
 import org.antlr.intellij.adaptor.lexer.ANTLRLexerAdaptor;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 import ru.hse.nml.NmlLanguage;
 import ru.hse.nml.grammar.NmlLexer;
 

@@ -1,4 +1,4 @@
-package ru.hse.nml.completion;
+package ru.hse.nml.braceMatcher;
 
 import com.intellij.lang.BracePair;
 import com.intellij.lang.PairedBraceMatcher;
@@ -6,7 +6,7 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.tree.IElementType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.hse.nml.NmlLexer;
+import ru.hse.nml.grammar.NmlLexer;
 import ru.hse.nml.NmlTypes;
 
 /**
@@ -30,13 +30,14 @@ public class NmlBraceMatcher implements PairedBraceMatcher {
             NmlTypes.getTokenElementType(NmlLexer.RBRACE),
             true
     );
-/*    private final BracePair arrows = new BracePair(
+    private final BracePair arrows = new BracePair(
             NmlTypes.getTokenElementType(NmlLexer.LE),
             NmlTypes.getTokenElementType(NmlLexer.GRE),
-            false
-    );*/
+            true
+    );
 
-    private final BracePair[] pairs = new BracePair[]{parens, braces, bracks, /*arrows*/};
+
+    private final BracePair[] pairs = new BracePair[]{parens, braces, bracks /*arrows*/};
 
     @NotNull
     @Override

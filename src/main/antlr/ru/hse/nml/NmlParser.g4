@@ -1,6 +1,10 @@
 parser grammar NmlParser;
 options { tokenVocab = NmlLexer; }
 
+specification:
+    declaration* EOF
+    ;
+
 declaration
     : letDef
     | typeDef
@@ -9,7 +13,17 @@ declaration
     | varDef
     | modeDef
     | opDef
+/*
+    | exceptionHandler
+*/
     ;
+
+//---------------   DEFINITION OF EXCEPTION HANDLER  ---------------//
+/*
+exceptionHandler
+    : INTERNAL? OP EXCEPTION LPAREN RPAREN opAttrList
+    ;
+*/
 
 //---------------   DEFINITION OF LET   ---------------//
 
@@ -208,12 +222,12 @@ op JZ (source: OPRNDL, target: J_ADDR)
 op MUL (rd : R, rs : R, rt : int(32))
 */
 opDef
-    : opAccess? OP (opNonException | opException) //OP ID opType
+    : opAccess? OP ID opType  //OP ID opType
     ;
 
-opNonException
+/*opNonException
     : ID opType
-    ;
+    ;*/
 opAccess
     : INTERNAL
     | PSEUDO
@@ -228,9 +242,9 @@ opAndRule
     : LPAREN opParameterList RPAREN opAttrList
     ;
 
-opException
+/*opException
     : EXCEPTION LPAREN RPAREN opAttrList
-    ;
+    ;*/
 
 opOrRule
     : ASSIGN ID (VERT_BAR ID)*
@@ -259,7 +273,11 @@ opImage
     ;
 opAction
     : ID DOT ACTION
-    | LBRACE sequence RBRACE
+    | sequenceBrace
+    ;
+
+sequenceBrace
+    : LBRACE sequence RBRACE
     ;
 //---------------   END DEFINITION OF OPeration  ---------------//
 

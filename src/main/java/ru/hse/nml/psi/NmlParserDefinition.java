@@ -1,6 +1,5 @@
-package ru.hse.nml;
+package ru.hse.nml.psi;
 
-import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.ParserDefinition;
 import com.intellij.lang.PsiParser;
@@ -21,18 +20,35 @@ import org.antlr.intellij.adaptor.psi.ANTLRPsiNode;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.jetbrains.annotations.NotNull;
-
-import ru.hse.nml.grammar.NmlLexer;
+import ru.hse.nml.NmlLanguage;
 import ru.hse.nml.grammar.NmlParser;
-import ru.hse.nml.psi.PsiNmlFileFileBase;
-import ru.hse.nml.psi.declaration.*;
-import ru.hse.nml.psi.letDefTree;
+import ru.hse.nml.NmlTypes;
+import ru.hse.nml.grammar.NmlLexer;
+import ru.hse.nml.psiOldOld.PsiNmlFileFileBase;
+import ru.hse.nml.psiG.NodeLetDefG;
+import ru.hse.nml.psiG.PsiElementFactoryG;
+import ru.hse.nml.psi.ruleNode.NodeRuleLet;
+import ru.hse.nml.psi.ruleNode.NodeRuleMem;
+import ru.hse.nml.psi.ruleNode.NodeRuleOp;
+import ru.hse.nml.psi.ruleNode.NodeRuleType;
 
+import java.util.HashMap;
 import java.util.List;
-
-/** The general interface between IDEA and nML. */
+import java.util.Map;
 
 public class NmlParserDefinition implements ParserDefinition {
+
+
+    private static final Map<IElementType, PsiElementFactoryG> ruleElementTypeToPsiFactory = new HashMap<>();
+    static {
+        PSIElementTypeFactory.defineLanguageIElementTypes(NmlLanguage.INSTANCE,
+                ru.hse.nml.grammar.NmlParser.tokenNames, ru.hse.nml.grammar.NmlParser.ruleNames);
+        List<TokenIElementType> tokenIElementTypes =
+                PSIElementTypeFactory.getTokenIElementTypes(NmlLanguage.INSTANCE);
+        ID = tokenIElementTypes.get(NmlLexer.ID);
+        ruleElementTypeToPsiFactory.put(NmlTypes.RULE_ELEMENT_TYPES.get(NmlParser.RULE_letDef), NodeLetDefG.FactoryG.INSTANCE);
+    }
+
     /**
      * Initialize AST ROOT file
      */
@@ -44,13 +60,6 @@ public class NmlParserDefinition implements ParserDefinition {
      */
     public static TokenIElementType ID;
 
-    static {
-        PSIElementTypeFactory.defineLanguageIElementTypes(NmlLanguage.INSTANCE,
-                NmlParser.tokenNames, NmlParser.ruleNames);
-        List<TokenIElementType> tokenIElementTypes =
-                PSIElementTypeFactory.getTokenIElementTypes(NmlLanguage.INSTANCE);
-        ID = tokenIElementTypes.get(NmlLexer.ID);
-    }
 
     public static final TokenSet COMMENTS =
             PSIElementTypeFactory.createTokenSet(
@@ -81,11 +90,11 @@ public class NmlParserDefinition implements ParserDefinition {
 
     @Override
     public PsiParser createParser(Project project) {
-        final NmlParser parser = new NmlParser(null);
+        final ru.hse.nml.grammar.NmlParser parser = new ru.hse.nml.grammar.NmlParser(null);
         return new ANTLRParserAdaptor(NmlLanguage.INSTANCE, parser) {
             @Override
             protected ParseTree parse(Parser parser, IElementType root) {
-                return ((NmlParser) parser).declaration();
+                return ((ru.hse.nml.grammar.NmlParser) parser).specification();
             }
         };
 
@@ -132,14 +141,59 @@ public class NmlParserDefinition implements ParserDefinition {
         return SpaceRequirements.MAY;
     }
 
-    /**
-     * Convert form NON-LEAF parse node (aka. AST) to PSI node.
-     *
-     * ANTLRPsiNode:
-     *
-     * RuleIElementType:
-     *
-     */
+    @NotNull
+    @Override
+    public PsiElement createElement(ASTNode node) {
+
+        IElementType elementType = node.getElementType();
+        if (elementType instanceof TokenIElementType) {
+            return new ANTLRPsiNode(node);
+        }
+        if (!(elementType instanceof RuleIElementType)) {
+            return new ANTLRPsiNode(node);
+        }
+        RuleIElementType ruleIElementType = (RuleIElementType) elementType;
+        switch (ruleIElementType.getRuleIndex()) {
+            case NmlParser.RULE_letDef:
+                return new NodeRuleLet(node);
+            case NmlParser.RULE_typeDef:
+                return new NodeRuleType(node);
+            case NmlParser.RULE_memDef:
+                return new NodeRuleMem(node);
+            case NmlParser.RULE_opDef:
+                return new NodeRuleOp(node);
+            default:
+                return new ANTLRPsiNode(node);
+        }
+    }
+
+
+
+/*
+        if (elementType instanceof RuleIElementType){
+            RuleIElementType ruleIElementType = (RuleIElementType) elementType;
+            switch (ruleIElementType.getRuleIndex()){
+                case NmlParser.RULE_letDef:
+                    return new LetDefNew(node, elementType);
+                default:
+                    return new ANTLRPsiNode(node);
+            }
+        }
+        return new ANTLRPsiNode(node);
+*/
+
+
+/*        if(tokenType == NmlTypes.RULE_ELEMENT_TYPES.get(NmlParser.RULE_letDef)){
+            //return NodeLetDefG.FactoryG.INSTANCE.createElement(node);
+            return new LetDefNew(node, tokenType);
+        }
+        else if (tokenType == NmlTypes.TOKEN_ELEMENT_TYPES.get(NmlLexer.ID)){
+            return new IdentificationNodeAbstract(node, tokenType);
+        }
+        return new ANTLRPsiNode(node);*/
+
+
+/*
     @NotNull
     @Override
     public PsiElement createElement(ASTNode node) {
@@ -150,7 +204,8 @@ public class NmlParserDefinition implements ParserDefinition {
         if (!(elementType instanceof RuleIElementType)){
             return new ANTLRPsiNode(node);
         }
-        RuleIElementType ruleIElementType = (RuleIElementType) elementType;
+        return new ANTLRPsiNode(node);
+        *//*RuleIElementType ruleIElementType = (RuleIElementType) elementType;
         switch (ruleIElementType.getRuleIndex()){
             case NmlParser.RULE_letDef:
                 return new PsiLetDef(node);
@@ -168,6 +223,7 @@ public class NmlParserDefinition implements ParserDefinition {
                 return new PsiOpDef(node);
             default:
                 return new ASTWrapperPsiElement(node);
-        }
-    }
+        }*/
+
 }
+

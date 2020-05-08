@@ -19,7 +19,7 @@ public class NmlFileType extends LanguageFileType {
     @NotNull
     @Override
     public String getName() {
-        return "nML file";
+        return "nML";
     }
 
     @NotNull
@@ -31,7 +31,7 @@ public class NmlFileType extends LanguageFileType {
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "nML";
+        return "nml";
     }
 
     @Nullable

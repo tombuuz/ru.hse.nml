@@ -33,6 +33,9 @@ ENUM      : 'enum';
 WS:                 [ \t\r\n\u000C]+ ;//-> channel(HIDDEN);
 BLOCK_COMMENT:            '/*' .*? '*/'   ;// -> channel(HIDDEN);
 LINE_COMMENT:       '//' ~[\r\n]*   ;// -> channel(HIDDEN);
+//BLOCK_COMMENT_L:      '/*' ;// -> channel(HIDDEN);
+//BLOCK_COMMENT_R:      '*/' ;// -> channel(HIDDEN);
+
 
 // Separators
 LPAREN:             '(';

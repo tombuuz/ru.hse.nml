@@ -1,557 +1,551 @@
-// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/grammar/NmlParser.g4 by ANTLR 4.8
+// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/NmlParser.g4 by ANTLR 4.8
 package ru.hse.nml.grammar;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
  * This interface defines a complete generic visitor for a parse tree produced
- * by {@link ru.hse.nml.grammar.NmlParser}.
+ * by {@link NmlParser}.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
 public interface NmlParserVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#declaration}.
+	 * Visit a parse tree produced by {@link NmlParser#specification}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDeclaration(ru.hse.nml.grammar.NmlParser.DeclarationContext ctx);
+	T visitSpecification(NmlParser.SpecificationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#letDef}.
+	 * Visit a parse tree produced by {@link NmlParser#declaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLetDef(ru.hse.nml.grammar.NmlParser.LetDefContext ctx);
+	T visitDeclaration(NmlParser.DeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#letExpr}.
+	 * Visit a parse tree produced by {@link NmlParser#letDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLetExpr(ru.hse.nml.grammar.NmlParser.LetExprContext ctx);
+	T visitLetDef(NmlParser.LetDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeDef}.
+	 * Visit a parse tree produced by {@link NmlParser#letExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeDef(ru.hse.nml.grammar.NmlParser.TypeDefContext ctx);
+	T visitLetExpr(NmlParser.LetExprContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExpr}.
+	 * Visit a parse tree produced by {@link NmlParser#typeDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeExpr(ru.hse.nml.grammar.NmlParser.TypeExprContext ctx);
+	T visitTypeDef(NmlParser.TypeDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExprDataType}.
+	 * Visit a parse tree produced by {@link NmlParser#typeExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeExprDataType(ru.hse.nml.grammar.NmlParser.TypeExprDataTypeContext ctx);
+	T visitTypeExpr(NmlParser.TypeExprContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#typeExprValue}.
+	 * Visit a parse tree produced by {@link NmlParser#typeExprDataType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTypeExprValue(ru.hse.nml.grammar.NmlParser.TypeExprValueContext ctx);
+	T visitTypeExprDataType(NmlParser.TypeExprDataTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memDef}.
+	 * Visit a parse tree produced by {@link NmlParser#typeExprValue}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemDef(ru.hse.nml.grammar.NmlParser.MemDefContext ctx);
+	T visitTypeExprValue(NmlParser.TypeExprValueContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memAccess}.
+	 * Visit a parse tree produced by {@link NmlParser#memDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemAccess(ru.hse.nml.grammar.NmlParser.MemAccessContext ctx);
+	T visitMemDef(NmlParser.MemDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memSize}.
+	 * Visit a parse tree produced by {@link NmlParser#memAccess}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemSize(ru.hse.nml.grammar.NmlParser.MemSizeContext ctx);
+	T visitMemAccess(NmlParser.MemAccessContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memType}.
+	 * Visit a parse tree produced by {@link NmlParser#memSize}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemType(ru.hse.nml.grammar.NmlParser.MemTypeContext ctx);
+	T visitMemSize(NmlParser.MemSizeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#varDef}.
+	 * Visit a parse tree produced by {@link NmlParser#memType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVarDef(ru.hse.nml.grammar.NmlParser.VarDefContext ctx);
+	T visitMemType(NmlParser.MemTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#varSizeType}.
+	 * Visit a parse tree produced by {@link NmlParser#varDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVarSizeType(ru.hse.nml.grammar.NmlParser.VarSizeTypeContext ctx);
+	T visitVarDef(NmlParser.VarDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regDef}.
+	 * Visit a parse tree produced by {@link NmlParser#varSizeType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRegDef(ru.hse.nml.grammar.NmlParser.RegDefContext ctx);
+	T visitVarSizeType(NmlParser.VarSizeTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regSize}.
+	 * Visit a parse tree produced by {@link NmlParser#regDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRegSize(ru.hse.nml.grammar.NmlParser.RegSizeContext ctx);
+	T visitRegDef(NmlParser.RegDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regType}.
+	 * Visit a parse tree produced by {@link NmlParser#regSize}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRegType(ru.hse.nml.grammar.NmlParser.RegTypeContext ctx);
+	T visitRegSize(NmlParser.RegSizeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeDef}.
+	 * Visit a parse tree produced by {@link NmlParser#regType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeDef(ru.hse.nml.grammar.NmlParser.ModeDefContext ctx);
+	T visitRegType(NmlParser.RegTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAccess}.
+	 * Visit a parse tree produced by {@link NmlParser#modeDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeAccess(ru.hse.nml.grammar.NmlParser.ModeAccessContext ctx);
+	T visitModeDef(NmlParser.ModeDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeType}.
+	 * Visit a parse tree produced by {@link NmlParser#modeAccess}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeType(ru.hse.nml.grammar.NmlParser.ModeTypeContext ctx);
+	T visitModeAccess(NmlParser.ModeAccessContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeOr}.
+	 * Visit a parse tree produced by {@link NmlParser#modeType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeOr(ru.hse.nml.grammar.NmlParser.ModeOrContext ctx);
+	T visitModeType(NmlParser.ModeTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAnd}.
+	 * Visit a parse tree produced by {@link NmlParser#modeOr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeAnd(ru.hse.nml.grammar.NmlParser.ModeAndContext ctx);
+	T visitModeOr(NmlParser.ModeOrContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeParamList}.
+	 * Visit a parse tree produced by {@link NmlParser#modeAnd}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeParamList(ru.hse.nml.grammar.NmlParser.ModeParamListContext ctx);
+	T visitModeAnd(NmlParser.ModeAndContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAssignPart}.
+	 * Visit a parse tree produced by {@link NmlParser#modeParamList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeAssignPart(ru.hse.nml.grammar.NmlParser.ModeAssignPartContext ctx);
+	T visitModeParamList(NmlParser.ModeParamListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAssignPartMini}.
+	 * Visit a parse tree produced by {@link NmlParser#modeAssignPart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeAssignPartMini(ru.hse.nml.grammar.NmlParser.ModeAssignPartMiniContext ctx);
+	T visitModeAssignPart(NmlParser.ModeAssignPartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAttrList}.
+	 * Visit a parse tree produced by {@link NmlParser#modeAssignPartMini}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeAttrList(ru.hse.nml.grammar.NmlParser.ModeAttrListContext ctx);
+	T visitModeAssignPartMini(NmlParser.ModeAssignPartMiniContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignInitPart}.
+	 * Visit a parse tree produced by {@link NmlParser#modeAttrList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignInitPart(ru.hse.nml.grammar.NmlParser.AssignInitPartContext ctx);
+	T visitModeAttrList(NmlParser.ModeAttrListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeSyntaxPart}.
+	 * Visit a parse tree produced by {@link NmlParser#assignInitPart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeSyntaxPart(ru.hse.nml.grammar.NmlParser.ModeSyntaxPartContext ctx);
+	T visitAssignInitPart(NmlParser.AssignInitPartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeImagePart}.
+	 * Visit a parse tree produced by {@link NmlParser#modeSyntaxPart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeImagePart(ru.hse.nml.grammar.NmlParser.ModeImagePartContext ctx);
+	T visitModeSyntaxPart(NmlParser.ModeSyntaxPartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeActionPart}.
+	 * Visit a parse tree produced by {@link NmlParser#modeImagePart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeActionPart(ru.hse.nml.grammar.NmlParser.ModeActionPartContext ctx);
+	T visitModeImagePart(NmlParser.ModeImagePartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeRev}.
+	 * Visit a parse tree produced by {@link NmlParser#modeActionPart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeRev(ru.hse.nml.grammar.NmlParser.ModeRevContext ctx);
+	T visitModeActionPart(NmlParser.ModeActionPartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeSyntax}.
+	 * Visit a parse tree produced by {@link NmlParser#modeRev}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeSyntax(ru.hse.nml.grammar.NmlParser.ModeSyntaxContext ctx);
+	T visitModeRev(NmlParser.ModeRevContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeImage}.
+	 * Visit a parse tree produced by {@link NmlParser#modeSyntax}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeImage(ru.hse.nml.grammar.NmlParser.ModeImageContext ctx);
+	T visitModeSyntax(NmlParser.ModeSyntaxContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeAction}.
+	 * Visit a parse tree produced by {@link NmlParser#modeImage}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeAction(ru.hse.nml.grammar.NmlParser.ModeActionContext ctx);
+	T visitModeImage(NmlParser.ModeImageContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opDef}.
+	 * Visit a parse tree produced by {@link NmlParser#modeAction}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpDef(ru.hse.nml.grammar.NmlParser.OpDefContext ctx);
+	T visitModeAction(NmlParser.ModeActionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opNonException}.
+	 * Visit a parse tree produced by {@link NmlParser#opDef}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpNonException(ru.hse.nml.grammar.NmlParser.OpNonExceptionContext ctx);
+	T visitOpDef(NmlParser.OpDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAccess}.
+	 * Visit a parse tree produced by {@link NmlParser#opAccess}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpAccess(ru.hse.nml.grammar.NmlParser.OpAccessContext ctx);
+	T visitOpAccess(NmlParser.OpAccessContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opType}.
+	 * Visit a parse tree produced by {@link NmlParser#opType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpType(ru.hse.nml.grammar.NmlParser.OpTypeContext ctx);
+	T visitOpType(NmlParser.OpTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAndRule}.
+	 * Visit a parse tree produced by {@link NmlParser#opAndRule}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpAndRule(ru.hse.nml.grammar.NmlParser.OpAndRuleContext ctx);
+	T visitOpAndRule(NmlParser.OpAndRuleContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opException}.
+	 * Visit a parse tree produced by {@link NmlParser#opOrRule}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpException(ru.hse.nml.grammar.NmlParser.OpExceptionContext ctx);
+	T visitOpOrRule(NmlParser.OpOrRuleContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opOrRule}.
+	 * Visit a parse tree produced by {@link NmlParser#opParameterList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpOrRule(ru.hse.nml.grammar.NmlParser.OpOrRuleContext ctx);
+	T visitOpParameterList(NmlParser.OpParameterListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opParameterList}.
+	 * Visit a parse tree produced by {@link NmlParser#opParameter}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpParameterList(ru.hse.nml.grammar.NmlParser.OpParameterListContext ctx);
+	T visitOpParameter(NmlParser.OpParameterContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opParameter}.
+	 * Visit a parse tree produced by {@link NmlParser#opAttrList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpParameter(ru.hse.nml.grammar.NmlParser.OpParameterContext ctx);
+	T visitOpAttrList(NmlParser.OpAttrListContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAttrList}.
+	 * Visit a parse tree produced by {@link NmlParser#opSyntax}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpAttrList(ru.hse.nml.grammar.NmlParser.OpAttrListContext ctx);
+	T visitOpSyntax(NmlParser.OpSyntaxContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opSyntax}.
+	 * Visit a parse tree produced by {@link NmlParser#opImage}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpSyntax(ru.hse.nml.grammar.NmlParser.OpSyntaxContext ctx);
+	T visitOpImage(NmlParser.OpImageContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opImage}.
+	 * Visit a parse tree produced by {@link NmlParser#opAction}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpImage(ru.hse.nml.grammar.NmlParser.OpImageContext ctx);
+	T visitOpAction(NmlParser.OpActionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#opAction}.
+	 * Visit a parse tree produced by {@link NmlParser#sequence}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOpAction(ru.hse.nml.grammar.NmlParser.OpActionContext ctx);
+	T visitSequence(NmlParser.SequenceContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sequence}.
+	 * Visit a parse tree produced by {@link NmlParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSequence(ru.hse.nml.grammar.NmlParser.SequenceContext ctx);
+	T visitStatement(NmlParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#statement}.
+	 * Visit a parse tree produced by {@link NmlParser#regularStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStatement(ru.hse.nml.grammar.NmlParser.StatementContext ctx);
+	T visitRegularStatement(NmlParser.RegularStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#regularStatement}.
+	 * Visit a parse tree produced by {@link NmlParser#callStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRegularStatement(ru.hse.nml.grammar.NmlParser.RegularStatementContext ctx);
+	T visitCallStatement(NmlParser.CallStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#callStatement}.
+	 * Visit a parse tree produced by {@link NmlParser#assignStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCallStatement(ru.hse.nml.grammar.NmlParser.CallStatementContext ctx);
+	T visitAssignStatement(NmlParser.AssignStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatement}.
+	 * Visit a parse tree produced by {@link NmlParser#assignStatementRightParen}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignStatement(ru.hse.nml.grammar.NmlParser.AssignStatementContext ctx);
+	T visitAssignStatementRightParen(NmlParser.AssignStatementRightParenContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRightParen}.
+	 * Visit a parse tree produced by {@link NmlParser#assignStatementRight}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignStatementRightParen(ru.hse.nml.grammar.NmlParser.AssignStatementRightParenContext ctx);
+	T visitAssignStatementRight(NmlParser.AssignStatementRightContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRight}.
+	 * Visit a parse tree produced by {@link NmlParser#assignStatementRightVar}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignStatementRight(ru.hse.nml.grammar.NmlParser.AssignStatementRightContext ctx);
+	T visitAssignStatementRightVar(NmlParser.AssignStatementRightVarContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#assignStatementRightVar}.
+	 * Visit a parse tree produced by {@link NmlParser#exceptionStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignStatementRightVar(ru.hse.nml.grammar.NmlParser.AssignStatementRightVarContext ctx);
+	T visitExceptionStatement(NmlParser.ExceptionStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#exceptionStatement}.
+	 * Visit a parse tree produced by {@link NmlParser#markStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExceptionStatement(ru.hse.nml.grammar.NmlParser.ExceptionStatementContext ctx);
+	T visitMarkStatement(NmlParser.MarkStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#markStatement}.
+	 * Visit a parse tree produced by {@link NmlParser#conditionalStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMarkStatement(ru.hse.nml.grammar.NmlParser.MarkStatementContext ctx);
+	T visitConditionalStatement(NmlParser.ConditionalStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#conditionalStatement}.
+	 * Visit a parse tree produced by {@link NmlParser#booleanState}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitConditionalStatement(ru.hse.nml.grammar.NmlParser.ConditionalStatementContext ctx);
+	T visitBooleanState(NmlParser.BooleanStateContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#booleanState}.
+	 * Visit a parse tree produced by {@link NmlParser#booleanVal}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBooleanState(ru.hse.nml.grammar.NmlParser.BooleanStateContext ctx);
+	T visitBooleanVal(NmlParser.BooleanValContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#booleanVal}.
+	 * Visit a parse tree produced by {@link NmlParser#elifState}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBooleanVal(ru.hse.nml.grammar.NmlParser.BooleanValContext ctx);
+	T visitElifState(NmlParser.ElifStateContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#elifState}.
+	 * Visit a parse tree produced by {@link NmlParser#format}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElifState(ru.hse.nml.grammar.NmlParser.ElifStateContext ctx);
+	T visitFormat(NmlParser.FormatContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#format}.
+	 * Visit a parse tree produced by {@link NmlParser#formatString}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFormat(ru.hse.nml.grammar.NmlParser.FormatContext ctx);
+	T visitFormatString(NmlParser.FormatStringContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatString}.
+	 * Visit a parse tree produced by {@link NmlParser#formatParameter}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFormatString(ru.hse.nml.grammar.NmlParser.FormatStringContext ctx);
+	T visitFormatParameter(NmlParser.FormatParameterContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatParameter}.
+	 * Visit a parse tree produced by {@link NmlParser#formatParameterMini}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFormatParameter(ru.hse.nml.grammar.NmlParser.FormatParameterContext ctx);
+	T visitFormatParameterMini(NmlParser.FormatParameterMiniContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#formatParameterMini}.
+	 * Visit a parse tree produced by {@link NmlParser#syntaImageActionCall}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFormatParameterMini(ru.hse.nml.grammar.NmlParser.FormatParameterMiniContext ctx);
+	T visitSyntaImageActionCall(NmlParser.SyntaImageActionCallContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#syntaImageActionCall}.
+	 * Visit a parse tree produced by {@link NmlParser#sIAPar}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSyntaImageActionCall(ru.hse.nml.grammar.NmlParser.SyntaImageActionCallContext ctx);
+	T visitSIAPar(NmlParser.SIAParContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sIAPar}.
+	 * Visit a parse tree produced by {@link NmlParser#sIAParMini}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSIAPar(ru.hse.nml.grammar.NmlParser.SIAParContext ctx);
+	T visitSIAParMini(NmlParser.SIAParMiniContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sIAParMini}.
+	 * Visit a parse tree produced by {@link NmlParser#modeCall}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSIAParMini(ru.hse.nml.grammar.NmlParser.SIAParMiniContext ctx);
+	T visitModeCall(NmlParser.ModeCallContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#modeCall}.
+	 * Visit a parse tree produced by {@link NmlParser#location}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModeCall(ru.hse.nml.grammar.NmlParser.ModeCallContext ctx);
+	T visitLocation(NmlParser.LocationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#location}.
+	 * Visit a parse tree produced by {@link NmlParser#locationNoDot}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLocation(ru.hse.nml.grammar.NmlParser.LocationContext ctx);
+	T visitLocationNoDot(NmlParser.LocationNoDotContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationNoDot}.
+	 * Visit a parse tree produced by {@link NmlParser#locationDCol}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLocationNoDot(ru.hse.nml.grammar.NmlParser.LocationNoDotContext ctx);
+	T visitLocationDCol(NmlParser.LocationDColContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationDCol}.
+	 * Visit a parse tree produced by {@link NmlParser#locationDColNoDot}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLocationDCol(ru.hse.nml.grammar.NmlParser.LocationDColContext ctx);
+	T visitLocationDColNoDot(NmlParser.LocationDColNoDotContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#locationDColNoDot}.
+	 * Visit a parse tree produced by {@link NmlParser#zero_extend}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLocationDColNoDot(ru.hse.nml.grammar.NmlParser.LocationDColNoDotContext ctx);
+	T visitZero_extend(NmlParser.Zero_extendContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#zero_extend}.
+	 * Visit a parse tree produced by {@link NmlParser#sign_extend}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitZero_extend(ru.hse.nml.grammar.NmlParser.Zero_extendContext ctx);
+	T visitSign_extend(NmlParser.Sign_extendContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#sign_extend}.
+	 * Visit a parse tree produced by {@link NmlParser#coerce}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSign_extend(ru.hse.nml.grammar.NmlParser.Sign_extendContext ctx);
+	T visitCoerce(NmlParser.CoerceContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerce}.
+	 * Visit a parse tree produced by {@link NmlParser#coerceType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCoerce(ru.hse.nml.grammar.NmlParser.CoerceContext ctx);
+	T visitCoerceType(NmlParser.CoerceTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerceType}.
+	 * Visit a parse tree produced by {@link NmlParser#coerceNumber}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCoerceType(ru.hse.nml.grammar.NmlParser.CoerceTypeContext ctx);
+	T visitCoerceNumber(NmlParser.CoerceNumberContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#coerceNumber}.
+	 * Visit a parse tree produced by {@link NmlParser#cast}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCoerceNumber(ru.hse.nml.grammar.NmlParser.CoerceNumberContext ctx);
+	T visitCast(NmlParser.CastContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#cast}.
+	 * Visit a parse tree produced by {@link NmlParser#castType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCast(ru.hse.nml.grammar.NmlParser.CastContext ctx);
+	T visitCastType(NmlParser.CastTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castType}.
+	 * Visit a parse tree produced by {@link NmlParser#castNumberPart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCastType(ru.hse.nml.grammar.NmlParser.CastTypeContext ctx);
+	T visitCastNumberPart(NmlParser.CastNumberPartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castNumberPart}.
+	 * Visit a parse tree produced by {@link NmlParser#castNumber}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCastNumberPart(ru.hse.nml.grammar.NmlParser.CastNumberPartContext ctx);
+	T visitCastNumber(NmlParser.CastNumberContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#castNumber}.
+	 * Visit a parse tree produced by {@link NmlParser#trace}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCastNumber(ru.hse.nml.grammar.NmlParser.CastNumberContext ctx);
+	T visitTrace(NmlParser.TraceContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#trace}.
+	 * Visit a parse tree produced by {@link NmlParser#traceString}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTrace(ru.hse.nml.grammar.NmlParser.TraceContext ctx);
+	T visitTraceString(NmlParser.TraceStringContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceString}.
+	 * Visit a parse tree produced by {@link NmlParser#traceVars}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTraceString(ru.hse.nml.grammar.NmlParser.TraceStringContext ctx);
+	T visitTraceVars(NmlParser.TraceVarsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceVars}.
+	 * Visit a parse tree produced by {@link NmlParser#traceVar}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTraceVars(ru.hse.nml.grammar.NmlParser.TraceVarsContext ctx);
+	T visitTraceVar(NmlParser.TraceVarContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#traceVar}.
+	 * Visit a parse tree produced by {@link NmlParser#memoryAddressDCol}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTraceVar(ru.hse.nml.grammar.NmlParser.TraceVarContext ctx);
+	T visitMemoryAddressDCol(NmlParser.MemoryAddressDColContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memoryAddressDCol}.
+	 * Visit a parse tree produced by {@link NmlParser#memoryAddress}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemoryAddressDCol(ru.hse.nml.grammar.NmlParser.MemoryAddressDColContext ctx);
+	T visitMemoryAddress(NmlParser.MemoryAddressContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memoryAddress}.
+	 * Visit a parse tree produced by {@link NmlParser#memTypePart}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemoryAddress(ru.hse.nml.grammar.NmlParser.MemoryAddressContext ctx);
+	T visitMemTypePart(NmlParser.MemTypePartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#memTypePart}.
+	 * Visit a parse tree produced by {@link NmlParser#operatorArith}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMemTypePart(ru.hse.nml.grammar.NmlParser.MemTypePartContext ctx);
+	T visitOperatorArith(NmlParser.OperatorArithContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#operatorArith}.
+	 * Visit a parse tree produced by {@link NmlParser#operatorCompare}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOperatorArith(ru.hse.nml.grammar.NmlParser.OperatorArithContext ctx);
+	T visitOperatorCompare(NmlParser.OperatorCompareContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#operatorCompare}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitOperatorCompare(ru.hse.nml.grammar.NmlParser.OperatorCompareContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link ru.hse.nml.grammar.NmlParser#numberExpr}.
+	 * Visit a parse tree produced by {@link NmlParser#numberExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */

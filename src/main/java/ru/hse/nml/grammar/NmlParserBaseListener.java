@@ -1,4 +1,4 @@
-// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/grammar/NmlParser.g4 by ANTLR 4.8
+// Generated from /Users/tomoo/proj/ru.hse.nml/src/main/antlr/ru/hse/nml/NmlParser.g4 by ANTLR 4.8
 package ru.hse.nml.grammar;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -11,6 +11,18 @@ import org.antlr.v4.runtime.tree.TerminalNode;
  * of the available methods.
  */
 public class NmlParserBaseListener implements NmlParserListener {
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSpecification(NmlParser.SpecificationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSpecification(NmlParser.SpecificationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -424,18 +436,6 @@ public class NmlParserBaseListener implements NmlParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOpNonException(NmlParser.OpNonExceptionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitOpNonException(NmlParser.OpNonExceptionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterOpAccess(NmlParser.OpAccessContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -467,18 +467,6 @@ public class NmlParserBaseListener implements NmlParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOpAndRule(NmlParser.OpAndRuleContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterOpException(NmlParser.OpExceptionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitOpException(NmlParser.OpExceptionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

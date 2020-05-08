@@ -6,10 +6,9 @@ import org.antlr.intellij.adaptor.lexer.PSIElementTypeFactory;
 import org.antlr.intellij.adaptor.lexer.RuleIElementType;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
 import org.intellij.lang.annotations.MagicConstant;
-import ru.hse.nml.grammar.NmlLexer;
 import ru.hse.nml.grammar.NmlParser;
+import ru.hse.nml.grammar.NmlLexer;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class NmlTypes {
@@ -35,6 +34,8 @@ public class NmlTypes {
             PSIElementTypeFactory.createTokenSet(NmlLanguage.INSTANCE,
                     NmlLexer.LET
                     );
+
+
 
     public static RuleIElementType getRuleElementType(@MagicConstant(valuesFromClass = NmlParser.class)int ruleIndex){
         return RULE_ELEMENT_TYPES.get(ruleIndex);
