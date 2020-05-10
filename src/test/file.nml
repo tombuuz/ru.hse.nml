@@ -1,11 +1,23 @@
 let REGISTER_INDEX_SIZEEEE = 5
 let Something = "dfsa"
 type som = card(32)
+let ss = "S"
+
+Something
+
 
 /*
 
+     Restriction: Processor operation is UNPREDICTABLE if a branch or jump
+     instruction is placed in the delay slot of a branch or jump.
+
+    Prevents making a jump when the context has been switched to executing
+    some other code between executing a branch instruction and its delay
+    slot (this can happen during presimulation when initialization code
+    is executed in the middle).
 
 */
+
 
 
 
@@ -29,13 +41,7 @@ internal op instruction (command: Operations)
     // A taken branch assigns the target address to the PC during the instruction
     // time of the instruction in the branch delay slot.
     //
-    // Restriction: Processor operation is UNPREDICTABLE if a branch or jump
-    // instruction is placed in the delay slot of a branch or jump.
 
-    // Prevents making a jump when the context has been switched to executing
-    // some other code between executing a branch instruction and its delay
-    // slot (this can happen during presimulation when initialization code
-    // is executed in the middle).
     if CIA == CIA_COPY then
       is_delay_slot = BRANCH;
       jump_address = JMPADDR;
@@ -67,6 +73,7 @@ internal op instruction (command: Operations)
 
 
 
+
 label mode LA_ADDR(value: WORD) = value
   syntax = format("0x%X", value)
   image = format("%s", value)
@@ -83,3 +90,4 @@ pseudo op la(rd : REG, addr : LA_ADDR)
 
 ////////////////////////////////////////////////////////////////////////////////
 // Internal Operation to Handle Exceptions
+
