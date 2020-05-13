@@ -1,0 +1,90 @@
+let REGISTER_INDEX_SIZEEEE = 5
+let Something = "dfsa"
+type som = card(32)
+
+
+/*
+
+     Restriction: Processor operation is UNPREDICTABLE if a branch or jump
+     instruction is placed in the delay slot of a branch or jump.
+
+    Prevents making a jump when the context has been switched to executing
+    some other code between executing a branch instruction and its delay
+    slot (this can happen during presimulation when initialization code
+    is executed in the middle).
+
+*/
+
+
+
+
+internal op instruction (command: Operations)
+  syntax = command.syntax
+  image  = command.image
+  action = {
+    GPR[0] = 0;
+
+    // This code is responsible for updating the value of the program counter.
+    //
+    // Explanation based on the MIPS architecture manual:
+    //
+    // The Program Counter value. During the instruction time of an instruction,
+    // this is the address of the instruction word. The address of the
+    // instruction that occurs during the next instruction time is determined by
+    // assigning a value to PC (JMPADDR and BRANCH are used signal that PC is
+    // to be assigned a new value) during an instruction time. If no value is
+    // assigned to PC during an instruction time by any pseudocode statement,
+    // it is automatically incremented 4 before the next instruction time.
+    // A taken branch assigns the target address to the PC during the instruction
+    // time of the instruction in the branch delay slot.
+    //
+
+    if CIA == CIA_COPY then
+      is_delay_slot = BRANCH;
+      jump_address = JMPADDR;
+    else
+      is_delay_slot = 0;
+      jump_address = 0;
+    endif;
+
+    BRANCH = 0;
+    JMPADDR = 0;
+
+    command.action;
+
+    if is_delay_slot == 1 && BRANCH == 1 then
+      unpredicted;
+    endif;
+
+    if is_delay_slot == 1 then
+      CIA = jump_address;
+    else
+      CIA = CIA + 4;
+    endif;
+
+    CIA_COPY = CIA;
+  }
+
+////////////////////////////////////////////////////////////////////////////////
+// Pseudo Instructions
+
+
+
+
+label mode LA_ADDR(value: WORD) = value
+  syntax = format("0x%X", value)
+  image = format("%s", value)
+
+  
+pseudo op la(rd : REG, addr : LA_ADDR)
+  syntax = format("la %s, %s", rd.syntax, addr.syntax)
+  image  = format("%s%s", lui(rd, addr.value<16..31>).image,
+                          ori(rd, rd, addr.value<0..15>).image)
+  action = {
+    instruction(lui(rd, addr.value<16..31>)).action;
+    instruction(ori(rd, rd, addr.value<0..15>)).action;
+  }
+
+////////////////////////////////////////////////////////////////////////////////
+// Internal Operation to Handle Exceptions
+
