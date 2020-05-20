@@ -47,6 +47,10 @@ public class NmlItemPresentation implements ItemPresentation {
     public String getPresentableText() {
         if(element instanceof NodeRuleLet){
             return "let: " + ((NodeRuleLet) element).getId().getText();
+        }else if(element instanceof NodeRuleModeOr){
+            return "mode OR: " + ((NodeRuleModeOr) element).getId().getText();
+        }else if(element instanceof NodeRuleModeAnd){
+            return "mode AND: " + ((NodeRuleModeAnd) element).getId().getText();
         }
         else if(element instanceof NodeRuleType){
             return "type: " + ((NodeRuleType) element).getId().getText();
@@ -57,11 +61,7 @@ public class NmlItemPresentation implements ItemPresentation {
         else if(element instanceof NodeRuleOp){
             return "op: " + ((NodeRuleOp) element).getId().getText();
         }
-        else if(element instanceof NodeRuleModeOr){
-            return "op: " + ((NodeRuleModeOr) element).getId().getText();
-        }else if(element instanceof NodeRuleModeAnd){
-            return "op: " + ((NodeRuleModeAnd) element).getId().getText();
-        }
+
         return "n/a";
     }
 

@@ -70,7 +70,9 @@ public class NmlStructureViewElement implements StructureViewTreeElement, Sortab
                     if ( element instanceof NodeRuleLet
                             || element instanceof NodeRuleType
                             || element instanceof NodeRuleMem
-                            || element instanceof NodeRuleOp) {
+                            || element instanceof NodeRuleOp
+                            || element instanceof NodeRuleModeAnd
+                            || element instanceof NodeRuleModeOr) {
                         treeElements.add(new NmlStructureViewElement((NavigatablePsiElement)element));
                         return;
                     }
