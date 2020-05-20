@@ -12,10 +12,7 @@ import com.intellij.psi.PsiRecursiveElementVisitor;
 import com.intellij.psi.util.PsiTreeUtil;
 import org.jetbrains.annotations.NotNull;
 import ru.hse.nml.psi.PsiNmlFileBase;
-import ru.hse.nml.psi.ruleNode.NodeRuleLet;
-import ru.hse.nml.psi.ruleNode.NodeRuleMem;
-import ru.hse.nml.psi.ruleNode.NodeRuleOp;
-import ru.hse.nml.psi.ruleNode.NodeRuleType;
+import ru.hse.nml.psi.ruleNode.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,6 +108,22 @@ public class NmlStructureViewElement implements StructureViewTreeElement, Sortab
             if ( nodes != null ) {
                 for ( NodeRuleOp node : nodes ) {
                     treeElements.add(new NmlStructureViewElement(PsiTreeUtil.findChildOfType(node, NodeRuleOp.class)));
+                }
+            }
+        } else if (myElement instanceof NodeRuleModeOr) {
+            NodeRuleModeOr[] nodes = PsiTreeUtil.getChildrenOfType(myElement, NodeRuleModeOr.class);
+
+            if ( nodes != null ) {
+                for ( NodeRuleModeOr node : nodes ) {
+                    treeElements.add(new NmlStructureViewElement(PsiTreeUtil.findChildOfType(node, NodeRuleModeOr.class)));
+                }
+            }
+        } else if (myElement instanceof NodeRuleModeAnd) {
+            NodeRuleModeAnd[] nodes = PsiTreeUtil.getChildrenOfType(myElement, NodeRuleModeAnd.class);
+
+            if ( nodes != null ) {
+                for ( NodeRuleModeAnd node : nodes ) {
+                    treeElements.add(new NmlStructureViewElement(PsiTreeUtil.findChildOfType(node, NodeRuleModeAnd.class)));
                 }
             }
         }

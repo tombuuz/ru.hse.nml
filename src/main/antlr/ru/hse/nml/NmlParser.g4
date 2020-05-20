@@ -12,7 +12,8 @@ declaration
     | memDef
     | regDef
     | varDef
-    | modeDef
+    | modeDefAnd
+    | modeDefOr
     | opDef
 /*
     | exceptionHandler
@@ -128,8 +129,20 @@ mode MEM(i: card(6)) = M[i]
   image  = format("%6s", i)
 mode OPRNDR = OPRNDL | IMM
 */
+
+modeDefOr
+    : modeAccess? MODE ID modeOr
+    ;
+
+modeDefAnd
+    : modeAccess? MODE ID modeAnd
+    ;
+
+
+/*
 modeDef
     : modeAccess? MODE ID modeType;
+*/
 
 modeAccess
     : LABEL

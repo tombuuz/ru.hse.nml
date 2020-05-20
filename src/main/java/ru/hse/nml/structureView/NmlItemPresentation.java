@@ -4,10 +4,7 @@ import com.intellij.navigation.ItemPresentation;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.Nullable;
 import ru.hse.nml.icon.NmlIcons;
-import ru.hse.nml.psi.ruleNode.NodeRuleLet;
-import ru.hse.nml.psi.ruleNode.NodeRuleMem;
-import ru.hse.nml.psi.ruleNode.NodeRuleOp;
-import ru.hse.nml.psi.ruleNode.NodeRuleType;
+import ru.hse.nml.psi.ruleNode.*;
 
 import javax.swing.*;
 
@@ -29,6 +26,12 @@ public class NmlItemPresentation implements ItemPresentation {
         }
         else if(element instanceof NodeRuleOp){
             this.Icon = NmlIcons.OP;
+        }
+        else if(element instanceof NodeRuleModeOr){
+            this.Icon = NmlIcons.MODE;
+        }
+        else if(element instanceof NodeRuleModeAnd){
+            this.Icon = NmlIcons.MODE;
         }
         else{
             this.Icon = NmlIcons.FILE;
@@ -53,6 +56,11 @@ public class NmlItemPresentation implements ItemPresentation {
         }
         else if(element instanceof NodeRuleOp){
             return "op: " + ((NodeRuleOp) element).getId().getText();
+        }
+        else if(element instanceof NodeRuleModeOr){
+            return "op: " + ((NodeRuleModeOr) element).getId().getText();
+        }else if(element instanceof NodeRuleModeAnd){
+            return "op: " + ((NodeRuleModeAnd) element).getId().getText();
         }
         return "n/a";
     }

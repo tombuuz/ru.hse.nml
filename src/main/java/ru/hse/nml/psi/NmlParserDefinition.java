@@ -162,6 +162,10 @@ public class NmlParserDefinition implements ParserDefinition {
                 return new NodeRuleMem(node);
             case NmlParser.RULE_opDef:
                 return new NodeRuleOp(node);
+            case NmlParser.RULE_modeDefOr:
+                return new NodeRuleModeOr(node);
+            case NmlParser.RULE_modeDefAnd:
+                return new NodeRuleModeAnd(node);
             default:
                 return new ANTLRPsiNode(node);
         }

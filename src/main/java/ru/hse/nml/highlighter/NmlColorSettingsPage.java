@@ -26,8 +26,10 @@ public class NmlColorSettingsPage implements ColorSettingsPage {
             new AttributesDescriptor("Operation Sign", NmlSyntaxHighlighter.OPERATION_SIGN),
             new AttributesDescriptor("Comma", NmlSyntaxHighlighter.COMMA),
             new AttributesDescriptor("Parentheses", NmlSyntaxHighlighter.PARENTHESES),
-            new AttributesDescriptor("Brackets", NmlSyntaxHighlighter.BRACKETS)
-    };
+            new AttributesDescriptor("Brackets", NmlSyntaxHighlighter.BRACKETS),
+            new AttributesDescriptor("FUNCTION CALL", NmlSyntaxHighlighter.FUNCTION_CALL),
+            new AttributesDescriptor("LABEL", NmlSyntaxHighlighter.LABEL)
+};
 
     @Nullable
     @Override

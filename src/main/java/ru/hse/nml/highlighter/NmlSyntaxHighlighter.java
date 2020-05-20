@@ -35,6 +35,8 @@ public class NmlSyntaxHighlighter extends SyntaxHighlighterBase {
             TextAttributesKey.createTextAttributesKey("NML_BRACKETS", DefaultLanguageHighlighterColors.BRACKETS);
     public static final TextAttributesKey FUNCTION_CALL =
             TextAttributesKey.createTextAttributesKey("NML_FUNCTION_CALL", DefaultLanguageHighlighterColors.FUNCTION_CALL);
+    public static final TextAttributesKey LABEL =
+            TextAttributesKey.createTextAttributesKey("NML_LABEL", DefaultLanguageHighlighterColors.LABEL);
 
 
 
@@ -92,6 +94,7 @@ public class NmlSyntaxHighlighter extends SyntaxHighlighterBase {
                 break;
             case NmlLexer.VAR:
             case NmlLexer.LET:
+            case NmlLexer.MEM:
             case NmlLexer.TYPE:
             case NmlLexer.REG:
             case NmlLexer.MODE:
@@ -99,13 +102,12 @@ public class NmlSyntaxHighlighter extends SyntaxHighlighterBase {
             case NmlLexer.SYNTAX:
             case NmlLexer.IMAGE:
             case NmlLexer.ACTION:
-            case NmlLexer.SIGN_EXTEND:
-            case NmlLexer.ZERO_EXTEND:
-            case NmlLexer.TRACE:
-            case NmlLexer.CAST:
             case NmlLexer.CARD:
-            case NmlLexer.COERCE:
             case NmlLexer.INT:
+            case NmlLexer.IF:
+            case NmlLexer.THEN:
+            case NmlLexer.ELSE:
+            case NmlLexer.ENDIF:
                 attrKey = KEYWORD;
                 break;
             case NmlLexer.COMMA:
@@ -117,7 +119,38 @@ public class NmlSyntaxHighlighter extends SyntaxHighlighterBase {
                 break;
             case NmlLexer.LBRACE:
             case NmlLexer.RBRACE:
+
                 attrKey = BRACKETS;
+                break;
+            case NmlLexer.SIGN_EXTEND:
+            case NmlLexer.ZERO_EXTEND:
+            case NmlLexer.COERCE:
+            case NmlLexer.CAST:
+            case NmlLexer.INT_TO_FLOAT:
+            case NmlLexer.FLOAT_TO_FLOAT:
+            case NmlLexer.FLOAT_TO_INT:
+            case NmlLexer.FORMAT:
+            case NmlLexer.TRACE:
+            case NmlLexer.EXCEPTION:
+            case NmlLexer.MARK:
+            case NmlLexer.UNPREDICTED:
+            case NmlLexer.UNDEFINED:
+            case NmlLexer.ASSERT:
+            case NmlLexer.FUNCTION:
+            case NmlLexer.IS_NAN:
+            case NmlLexer.TYPE_OF:
+            case NmlLexer.SIZE_OF:
+            case NmlLexer.SQRT:
+            case NmlLexer.ROUND:
+            case NmlLexer.IS_SIGN_NAN:
+                attrKey = FUNCTION_CALL;
+                break;
+            case NmlLexer.PSEUDO:
+            case NmlLexer.LABEL:
+            case NmlLexer.INTERNAL:
+            case NmlLexer.SHARED:
+            case NmlLexer.REVISION:
+                attrKey = LABEL;
                 break;
             default:
                 return EMPTY_KEYS;
