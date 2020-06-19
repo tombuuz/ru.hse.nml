@@ -8,6 +8,6 @@ architecture decription language.
 
 __TODO__: Links on nML-related publications.
 
-The plugin is developed by _Lkhagvajav Dagvanorov_ as a course work at
+The plugin is developed by [Dagvanorov Lkhagvajav](https://github.com/tombuuz) as his course work at
 [Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
-The supervisor is _Andrei Tatarnikov_.
+The supervisor is [Andrei Tatarnikov](https://github.com/andrewt0301).
