@@ -1,6 +1,8 @@
 nML Lighter
 ---
 [![Apache License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
+[![Build Status](https://travis-ci.org/andrewt0301/nml-lighter.svg?branch=master)](
+https://travis-ci.org/andrewt0301/nml-lighter)
 ---
 
 __nML Lighter__ is a plugin for IntelliJ IDEA that provides a code editor for the nML
