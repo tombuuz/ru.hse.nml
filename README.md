@@ -31,6 +31,9 @@ __nML-related publications__
   [Specification-Based Test Program Generation for ARM VMSAv8-64 Memory Management Units](
   https://ieeexplore.ieee.org/document/7548929).
 * A. Kamkin, A. Tatarnikov et al.
+  [MicroTESK: Specification-Based Tool for Constructing Test Program Generators]( 
+  https://link.springer.com/chapter/10.1007/978-3-319-70389-3_15).  
+* A. Kamkin, A. Tatarnikov et al.
   [Maintaining ISA Specifications in MicroTESK Test Program Generator](
   https://ieeexplore.ieee.org/document/8396942).
 * A. Kamkin, A. Tatarnikov et al.
