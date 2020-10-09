@@ -1,13 +1,2 @@
 language : java
-
-script:
-  - ./gradlew build
-
-branches:
-  only:
-    - master
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+script: gradle build
