@@ -12,6 +12,9 @@ The plugin is developed by [Dagvanorov Lkhagvajav](https://github.com/tombuuz) a
 [Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
 The supervisor is [Andrei Tatarnikov](https://github.com/andrewt0301).
 
+The code editor is designed as a supplement for the [MicroTESK](http://www.microtesk.org)
+verification framework and is based on the same dialect of nML. 
+
 __nML-related presentations__
 
 * [Video](https://www.youtube.com/watch?v=7phKiMm3onE)
