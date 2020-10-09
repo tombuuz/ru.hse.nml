@@ -5,14 +5,14 @@ nML Lighter
 https://travis-ci.org/andrewt0301/nml-lighter)
 ---
 
-__nML Lighter__ is a plugin for IntelliJ IDEA that provides a code editor for the nML
-architecture decription language.
+__nML Lighter__ is a plugin for IntelliJ IDEA that provides a code editor for the __nML
+architecture decription language__.
 
 The plugin is developed by [Dagvanorov Lkhagvajav](https://github.com/tombuuz) as his course work at
 [Faculty of Computer Science of Higher School of Economics](https://cs.hse.ru/en/).
 The supervisor is [Andrei Tatarnikov](https://github.com/andrewt0301).
 
-__Presentations__
+__nML-related presentations__
 
 * [Video](https://www.youtube.com/watch?v=7phKiMm3onE)
 of the "Machine-Readable Specifications of RISC-V ISA" presentation by Alexander Kamkin 
