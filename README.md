@@ -36,5 +36,8 @@ __nML-related publications__
 * A. Kamkin, A. Tatarnikov et al.
   [Test Program Generator MicroTESK for RISC-V](
   https://ieeexplore.ieee.org/document/8746054).
+* A. Kamkin, P. Putro et al.
+  [Deductive Binary Code Verification Against Source-Code-Level Specifications](
+  https://link.springer.com/chapter/10.1007/978-3-030-50995-8_3).
 
 ![nML Lighter](nML_IntelliJ_Plugin.png)
